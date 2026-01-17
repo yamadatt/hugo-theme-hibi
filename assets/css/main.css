@@ -1,0 +1,63 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* Use class-based dark mode */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Noto Serif JP", "Noto Serif", serif;
+  --font-sans: "Noto Sans JP", "Noto Sans", sans-serif;
+
+  --color-primary: #3e5c5c;
+  --color-background-light: #fcfbf9;
+  --color-background-dark: #1a1c1e;
+  --color-surface-light: #ffffff;
+  --color-surface-dark: #23262a;
+
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+}
+
+@layer base {
+  html, body {
+    font-family: var(--font-sans);
+    background-color: var(--color-background-light);
+    color: #2c2c2c;
+  }
+  
+  .dark html, .dark body {
+    background-color: var(--color-background-dark);
+    color: #e0e0e0;
+  }
+
+  body {
+    font-feature-settings: "palt";
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.04em;
+  }
+
+  /* Force solid background for header to prevent transparency */
+  header.sticky {
+    background-color: var(--color-background-light) !important;
+    opacity: 1 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .dark header.sticky {
+    background-color: var(--color-background-dark) !important;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display) !important;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+  }
+  
+  p {
+    line-height: 1.8;
+  }
+}

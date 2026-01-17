@@ -1,0 +1,257 @@
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Life Log Archive</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;family=Noto+Sans+JP:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2e5c5c",
+                        "background-light": "#f4f3f0",
+                        "background-dark": "#17191c",
+                        "text-light": "#131616",
+                        "text-dark": "#e8e6e3",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans JP", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+    @layer utilities {
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    }
+</style>
+</head><body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-display min-h-screen flex flex-col transition-colors duration-300 antialiased selection:bg-primary/20 selection:text-primary overflow-x-hidden">
+<header class="sticky top-0 z-50 w-full backdrop-blur-md bg-background-light/90 dark:bg-background-dark/90 border-b border-[#e6e8e8] dark:border-gray-800 transition-colors duration-300">
+<div class="max-w-[1200px] mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
+<a class="flex items-center gap-3 group" href="#">
+<div class="size-6 text-primary transition-transform group-hover:scale-110 duration-300">
+<span class="material-symbols-outlined" style="font-size: 24px;">auto_stories</span>
+</div>
+<h1 class="text-lg font-bold tracking-tight text-text-light dark:text-text-dark">Life Log</h1>
+</a>
+<div class="flex items-center gap-4 md:gap-10">
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" href="#">Tags</a>
+<a class="text-sm font-bold text-primary dark:text-primary relative after:content-[''] after:absolute after:-bottom-5 after:left-0 after:w-full after:h-[2px] after:bg-primary" href="#">Archives</a>
+<a class="text-sm font-medium text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" href="#">About</a>
+</nav>
+<div class="flex items-center gap-3">
+<button aria-label="Toggle Theme" class="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-text-light dark:text-text-dark" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-symbols-outlined" style="font-size: 20px;">dark_mode</span>
+</button>
+<button aria-label="Search" class="flex items-center gap-1 pl-2 pr-3 py-1.5 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-text-light dark:text-text-dark group">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400 group-hover:text-primary transition-colors" style="font-size: 20px;">search</span>
+<span class="text-sm font-medium text-gray-600 dark:text-gray-300 group-hover:text-primary transition-colors">検索</span>
+</button>
+<button aria-label="Menu" class="md:hidden p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-text-light dark:text-text-dark">
+<span class="material-symbols-outlined" style="font-size: 24px;">menu</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 w-full max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-12 px-6 md:px-10 py-12 md:py-20">
+<aside class="hidden lg:block w-32 shrink-0 relative">
+<div class="sticky top-32 flex flex-col gap-1 border-l-2 border-[#e6e8e8] dark:border-gray-800 pl-6 py-2">
+<span class="text-xs font-sans uppercase tracking-widest text-gray-400 mb-2">Timeline</span>
+<a class="text-primary font-bold text-sm translate-x-1 transition-transform font-sans" href="#2024">2024年</a>
+<a class="text-gray-500 dark:text-gray-500 hover:text-primary dark:hover:text-primary hover:translate-x-1 transition-all text-sm font-sans" href="#2023">2023年</a>
+<a class="text-gray-500 dark:text-gray-500 hover:text-primary dark:hover:text-primary hover:translate-x-1 transition-all text-sm font-sans" href="#2022">2022年</a>
+<a class="text-gray-500 dark:text-gray-500 hover:text-primary dark:hover:text-primary hover:translate-x-1 transition-all text-sm font-sans" href="#2021">2021年</a>
+</div>
+</aside>
+<div class="flex-1 max-w-[720px] mx-auto w-full">
+<div class="mb-12 md:mb-20 space-y-4">
+<h2 class="text-4xl md:text-5xl font-black tracking-tight text-text-light dark:text-text-dark">Archive</h2>
+<p class="text-lg text-gray-500 dark:text-gray-400 font-normal leading-relaxed max-w-lg">
+                A chronological collection of moments, thoughts, and fragments of daily life.
+                <span class="block text-sm mt-1 opacity-70 font-sans">日々の断片と記憶の記録。</span>
+</p>
+</div>
+<div class="lg:hidden mb-16 relative w-full">
+<div class="flex items-center overflow-x-auto gap-6 pb-4 border-b border-dashed border-gray-200 dark:border-gray-800 no-scrollbar -mx-6 px-6">
+<span class="text-xs font-sans uppercase tracking-widest text-gray-400 shrink-0 sticky left-0 bg-background-light dark:bg-background-dark pr-4 z-10">Timeline</span>
+<a class="text-primary font-bold text-lg whitespace-nowrap shrink-0" href="#2024">2024</a>
+<a class="text-gray-400 hover:text-primary font-medium text-lg whitespace-nowrap shrink-0 transition-colors" href="#2023">2023</a>
+<a class="text-gray-400 hover:text-primary font-medium text-lg whitespace-nowrap shrink-0 transition-colors" href="#2022">2022</a>
+<a class="text-gray-400 hover:text-primary font-medium text-lg whitespace-nowrap shrink-0 transition-colors" href="#2021">2021</a>
+<a class="text-gray-400 hover:text-primary font-medium text-lg whitespace-nowrap shrink-0 transition-colors" href="#2020">2020</a>
+</div>
+</div>
+<section class="mb-24 relative group/year" id="2024">
+<div class="absolute -left-2 md:-left-16 -top-6 md:-top-10 text-[80px] md:text-[120px] font-bold text-gray-200/50 dark:text-gray-800/20 select-none pointer-events-none -z-10 transition-colors">
+                2024
+            </div>
+<div class="flex items-center gap-4 mb-10">
+<h3 class="text-3xl font-bold text-primary font-sans">2024年</h3>
+<div class="h-px bg-primary/20 flex-1"></div>
+</div>
+<div class="mb-12 pl-2 md:pl-4 border-l border-dashed border-gray-300 dark:border-gray-800 ml-2 md:ml-0">
+<h4 class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-6 flex items-center gap-2 font-sans">
+<span class="w-2 h-2 rounded-full bg-primary/40"></span> 2024年10月
+                </h4>
+<div class="flex flex-col gap-0">
+<a class="group flex flex-col sm:flex-row items-start gap-4 sm:gap-6 py-6 border-b border-[#f1f3f3] dark:border-gray-800/50 hover:border-primary/20 transition-all hover:bg-white/40 dark:hover:bg-white/5 -mx-4 px-4 rounded-xl" href="#">
+<span class="font-sans text-xs font-bold text-gray-400 dark:text-gray-500 sm:w-12 shrink-0 pt-2 group-hover:text-primary transition-colors">10.24</span>
+<div class="w-full sm:w-32 h-40 sm:h-20 shrink-0 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800">
+<img alt="Thumbnail" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADPc1PeX30St9ubCo4U5jqUThbZyhEfocUbk6eyHVyppXYneIPy3WuLwOvhTLBf1R-P9FRFXZW3z1IRK3C1iQe66DmB9dBFPE5l3_PiA_b2lZRziP36aKpvYU1oylOKF8KsYe4OYOFDZGF7M8ubmEsZ03Hvzsq6X0B5JBBnLkwicNqL6maOYqRq6-1GYI_rLSIzcOfcI8AmhsqeSGUEMghPOpPDgihtGGrICEp3H3HiTtyXaG1q2M0cZfaB0sRjsD-nTzobhnlbtKb"/>
+</div>
+<div class="flex flex-col gap-1.5 flex-1 min-w-0">
+<span class="text-lg font-bold text-text-light dark:text-text-dark group-hover:text-primary transition-colors leading-snug">Thoughts on a quiet morning</span>
+<span class="text-sm text-gray-500 dark:text-gray-400 font-sans opacity-80 group-hover:opacity-100 transition-opacity line-clamp-2">静かな朝の思いと、これからのこと</span>
+</div>
+</a>
+<a class="group flex flex-col sm:flex-row items-start gap-4 sm:gap-6 py-6 border-b border-[#f1f3f3] dark:border-gray-800/50 hover:border-primary/20 transition-all hover:bg-white/40 dark:hover:bg-white/5 -mx-4 px-4 rounded-xl" href="#">
+<span class="font-sans text-xs font-bold text-gray-400 dark:text-gray-500 sm:w-12 shrink-0 pt-2 group-hover:text-primary transition-colors">10.15</span>
+<div class="w-full sm:w-32 h-40 sm:h-20 shrink-0 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800">
+<img alt="Thumbnail" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn80gU-NSNQxU2JFcxVpBq0mOXaSapfZz7DnwmvPlaszzdamoQhDX6McG5qsELEOM7Kt8HkpbURboawDc31eo53MIdXA2Mos_aMbAKbmK039oQd6u-ntdEoETdCZRaSehESxDta8XmtAYhGgPyZMKs8XFMsZQRjtydTXPRAM5PYmsPEzhdgSWcpx7fR-x7cYCNiPUKdRRIsLMpB7yT7eJekaRpMnCtajW9Mh9mq7jatJ2SNYBD2P95MRuMMxIIYzc-ac1xazpz6zGJ"/>
+</div>
+<div class="flex flex-col gap-1.5 flex-1 min-w-0">
+<span class="text-lg font-bold text-text-light dark:text-text-dark group-hover:text-primary transition-colors leading-snug">Coffee and stacked books</span>
+<span class="text-sm text-gray-500 dark:text-gray-400 font-sans opacity-80 group-hover:opacity-100 transition-opacity line-clamp-2">積み上がった本とコーヒーの香り</span>
+</div>
+</a>
+<a class="group flex flex-col sm:flex-row items-start gap-4 sm:gap-6 py-6 border-b border-[#f1f3f3] dark:border-gray-800/50 hover:border-primary/20 transition-all hover:bg-white/40 dark:hover:bg-white/5 -mx-4 px-4 rounded-xl" href="#">
+<span class="font-sans text-xs font-bold text-gray-400 dark:text-gray-500 sm:w-12 shrink-0 pt-2 group-hover:text-primary transition-colors">10.02</span>
+<div class="w-full sm:w-32 h-40 sm:h-20 shrink-0 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800">
+<img alt="Thumbnail" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3T3VtmTOgTrj9ecHtIQDfO4WZ5Qxa97Cwp8OROGks9RuYjvGXpsmf7iR0AzXHzV7cJReZZeL0Ut4_N4q61t8CYXhlwBNpPeY2nmrDduKnwInoUVylJpIIMxb4sm9nmUGtHD53MTqgx5HqI1wHRFu0GkQimiGnd0ORwMfyny2mxn5dVwzCY1BxD3xIBumuqWhsmA_W_Rj7OUBdk8SJBwQx6fRDxUhPabqHg142vYnRqSf9nDX14x9qS1w4cDk9QmTXEl6bDa6fuKFi"/>
+</div>
+<div class="flex flex-col gap-1.5 flex-1 min-w-0">
+<span class="text-lg font-bold text-text-light dark:text-text-dark group-hover:text-primary transition-colors leading-snug">New camera gear</span>
+<span class="text-sm text-gray-500 dark:text-gray-400 font-sans opacity-80 group-hover:opacity-100 transition-opacity line-clamp-2">新しい機材のテスト撮影</span>
+</div>
+</a>
+</div>
+</div>
+<div class="mb-12 pl-2 md:pl-4 border-l border-dashed border-gray-300 dark:border-gray-800 ml-2 md:ml-0">
+<h4 class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-6 flex items-center gap-2 font-sans">
+<span class="w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-700"></span> 2024年9月
+                </h4>
+<div class="flex flex-col gap-0">
+<a class="group flex flex-col sm:flex-row items-start gap-4 sm:gap-6 py-6 border-b border-[#f1f3f3] dark:border-gray-800/50 hover:border-primary/20 transition-all hover:bg-white/40 dark:hover:bg-white/5 -mx-4 px-4 rounded-xl" href="#">
+<span class="font-sans text-xs font-bold text-gray-400 dark:text-gray-500 sm:w-12 shrink-0 pt-2 group-hover:text-primary transition-colors">09.28</span>
+<div class="w-full sm:w-32 h-40 sm:h-20 shrink-0 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800">
+<img alt="Thumbnail" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD48HdzF6YP9ieihtJwBnp7n3-c84IZd-F2JHQpA4HQ3imtIX7V6cjiELMU1YdSPC6FsTDmReo5YWqY95C4_V_6oZ3Ddqz92EBcvrn5Vp8rA-imNylWgE1QuGei40O1oN3sdX1NKeb23e_HAhGtboan8-0S0sVvHhuW1tGQvV9omGbwOKSVX3lvj8SgD4nmq7N2r-x6cXyiHV1Gou6E3tArB-SRqxVO8powi2A1Vvu1uvNho8BEuisxXZoTVDzaiGVMvOUTvqmZZLQ_"/>
+</div>
+<div class="flex flex-col gap-1.5 flex-1 min-w-0">
+<span class="text-lg font-bold text-text-light dark:text-text-dark group-hover:text-primary transition-colors leading-snug">Beginning of Autumn</span>
+<span class="text-sm text-gray-500 dark:text-gray-400 font-sans opacity-80 group-hover:opacity-100 transition-opacity line-clamp-2">秋の気配を感じて</span>
+</div>
+</a>
+<a class="group flex flex-col sm:flex-row items-start gap-4 sm:gap-6 py-6 border-b border-[#f1f3f3] dark:border-gray-800/50 hover:border-primary/20 transition-all hover:bg-white/40 dark:hover:bg-white/5 -mx-4 px-4 rounded-xl" href="#">
+<span class="font-sans text-xs font-bold text-gray-400 dark:text-gray-500 sm:w-12 shrink-0 pt-2 group-hover:text-primary transition-colors">09.11</span>
+<div class="w-full sm:w-32 h-40 sm:h-20 shrink-0 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800">
+<img alt="Thumbnail" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0OaPcg-zOkwAFMSAfacI2EMpjeYY_nEuC67PN8e3QFA2OGllhoraFKgrIgS0ghT9-IeyvBN30LHQY1KN9yeW--UE6ojtCEOV_Z8-aQ1sg5q2Tw1n4Ym64pi8_9lVA2MPVH9AkTFjqBGOpUz8gaWUvARAO-z01femPHlQjE3uTFyfGoQf9k3LaSFqsAQS87OzuOd8N45PaJFC-y58I02c-4o4PBOxT1b6d_232Y8XXWkpcJC0-yDM37LSF3xMfFqWS59JUGg5HUd_S"/>
+</div>
+<div class="flex flex-col gap-1.5 flex-1 min-w-0">
+<span class="text-lg font-bold text-text-light dark:text-text-dark group-hover:text-primary transition-colors leading-snug">Rainy days in Tokyo</span>
+<span class="text-sm text-gray-500 dark:text-gray-400 font-sans opacity-80 group-hover:opacity-100 transition-opacity line-clamp-2">東京の雨の日</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<section class="mb-24 relative group/year opacity-80 hover:opacity-100 transition-opacity" id="2023">
+<div class="absolute -left-2 md:-left-16 -top-6 md:-top-10 text-[80px] md:text-[120px] font-bold text-gray-200/50 dark:text-gray-800/20 select-none pointer-events-none -z-10 transition-colors">
+                2023
+            </div>
+<div class="flex items-center gap-4 mb-10">
+<h3 class="text-3xl font-bold text-text-light dark:text-text-dark font-sans">2023年</h3>
+<div class="h-px bg-gray-200 dark:bg-gray-800 flex-1"></div>
+</div>
+<div class="mb-12 pl-2 md:pl-4 border-l border-dashed border-gray-300 dark:border-gray-800 ml-2 md:ml-0">
+<h4 class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-6 flex items-center gap-2 font-sans">
+<span class="w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-700"></span> 2023年12月
+                </h4>
+<div class="flex flex-col gap-0">
+<a class="group flex flex-col sm:flex-row items-start gap-4 sm:gap-6 py-6 border-b border-[#f1f3f3] dark:border-gray-800/50 hover:border-primary/20 transition-all hover:bg-white/40 dark:hover:bg-white/5 -mx-4 px-4 rounded-xl" href="#">
+<span class="font-sans text-xs font-bold text-gray-400 dark:text-gray-500 sm:w-12 shrink-0 pt-2 group-hover:text-primary transition-colors">12.31</span>
+<div class="w-full sm:w-32 h-40 sm:h-20 shrink-0 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800">
+<img alt="Thumbnail" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpYMAQ82UBUfouMNTz651QbERhYlQDYK9BZnJBGEeDdmgLD2i8vE3EU9Ig5FUiPTp4BdB9vodrrlAvGhvb3bxiOsV4E5RZfnGjii-SgYy5X6PGYO9Iu2h1PUxTzodksV48ePy0SQv-v056b1AplzvvOGxdKYYZgPQwMNT85yRkH_RJhrJo9k7PGIQl_YfQD-ejGltUVYp87NARrkZVU7XMKUQ5hnOPcfd8JC0Tmct1avWhwrxNk5Xyt2p-SVQpevmz5rftVbc8Ep78"/>
+</div>
+<div class="flex flex-col gap-1.5 flex-1 min-w-0">
+<span class="text-lg font-bold text-text-light dark:text-text-dark group-hover:text-primary transition-colors leading-snug">Year in review</span>
+<span class="text-sm text-gray-500 dark:text-gray-400 font-sans opacity-80 group-hover:opacity-100 transition-opacity line-clamp-2">2023年の振り返り</span>
+</div>
+</a>
+<a class="group flex flex-col sm:flex-row items-start gap-4 sm:gap-6 py-6 border-b border-[#f1f3f3] dark:border-gray-800/50 hover:border-primary/20 transition-all hover:bg-white/40 dark:hover:bg-white/5 -mx-4 px-4 rounded-xl" href="#">
+<span class="font-sans text-xs font-bold text-gray-400 dark:text-gray-500 sm:w-12 shrink-0 pt-2 group-hover:text-primary transition-colors">12.14</span>
+<div class="w-full sm:w-32 h-40 sm:h-20 shrink-0 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800">
+<img alt="Thumbnail" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI83NCjZzqfB5heT817yxPAp58untpXdaPQAi8-Fr2s0PY9aaAYuACvFCo9qPmL4nBic6QIqc6cDo9Z7bavGr0OzlyIofVT6AGAEHWmRYsj00OKc8uOVjDuD75vkSb1DOuqGWozFBfD3eT5ra6h3ZaQ52SLQMebnKlwQuDmgZb9xAUiMTsa5oWVGRQ43fUjNq4Lc5rsJrznQQJQhHlj6w1FinKmJ6bmya8RBu8aoztFGts48W49YhlFFzLN1R0ashclnw_0IHlzP59"/>
+</div>
+<div class="flex flex-col gap-1.5 flex-1 min-w-0">
+<span class="text-lg font-bold text-text-light dark:text-text-dark group-hover:text-primary transition-colors leading-snug">Winter garden</span>
+<span class="text-sm text-gray-500 dark:text-gray-400 font-sans opacity-80 group-hover:opacity-100 transition-opacity line-clamp-2">冬の庭の手入れ</span>
+</div>
+</a>
+<a class="group flex flex-col sm:flex-row items-start gap-4 sm:gap-6 py-6 border-b border-[#f1f3f3] dark:border-gray-800/50 hover:border-primary/20 transition-all hover:bg-white/40 dark:hover:bg-white/5 -mx-4 px-4 rounded-xl" href="#">
+<span class="font-sans text-xs font-bold text-gray-400 dark:text-gray-500 sm:w-12 shrink-0 pt-2 group-hover:text-primary transition-colors">12.01</span>
+<div class="w-full sm:w-32 h-40 sm:h-20 shrink-0 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800">
+<img alt="Thumbnail" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHKPnlDtCvv4TwKzSqZIzyqhvJAt6Pn-_HGczwzV_eJir8RPCix7vVETWYcFMUx8R_cnki121Ent6UQOm89-jbmyTMOgWZ9_2LwKOztzGdiPgeBeWYB4VBDakt8p0SDvseX3kEs_nGz_ek5z6NsA2vSFmxqgfV3BeX4XIjHdMTQvQbQ1_68KDPZ37AtSWnghE8ywYz3R2UZMu9eoMe7KU8D0TYn5ymrQD6P6QyTwwx18Pn_4GlQgdfksqjWgT7N_qtOQC1aDyFheKP"/>
+</div>
+<div class="flex flex-col gap-1.5 flex-1 min-w-0">
+<span class="text-lg font-bold text-text-light dark:text-text-dark group-hover:text-primary transition-colors leading-snug">First snow</span>
+<span class="text-sm text-gray-500 dark:text-gray-400 font-sans opacity-80 group-hover:opacity-100 transition-opacity line-clamp-2">初雪の日</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<div class="flex items-center justify-center gap-2 mt-20 mb-24 font-sans select-none">
+<span class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-background-light text-sm font-bold shadow-sm ring-2 ring-primary ring-offset-2 ring-offset-background-light dark:ring-offset-background-dark">1</span>
+<a class="flex items-center justify-center w-10 h-10 rounded-full text-gray-500 hover:bg-gray-100 hover:text-primary dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-primary transition-all text-sm font-medium" href="#">2</a>
+<a class="flex items-center justify-center w-10 h-10 rounded-full text-gray-500 hover:bg-gray-100 hover:text-primary dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-primary transition-all text-sm font-medium" href="#">3</a>
+<span class="flex items-center justify-center w-10 h-10 text-gray-300 dark:text-gray-600">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</span>
+<a class="flex items-center justify-center w-10 h-10 rounded-full text-gray-500 hover:bg-gray-100 hover:text-primary dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-primary transition-all text-sm font-medium" href="#">12</a>
+<a class="group flex items-center gap-1 ml-4 pl-3 pr-2 py-2 rounded-full hover:bg-gray-50 dark:hover:bg-white/5 transition-colors text-gray-500 dark:text-gray-400 hover:text-primary" href="#">
+<span class="text-sm font-bold">次へ</span>
+<span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</main>
+<footer class="border-t border-[#e6e8e8] dark:border-gray-800 py-12 bg-white dark:bg-[#121417]">
+<div class="max-w-[1200px] mx-auto px-10 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-2 text-gray-400">
+<span class="material-symbols-outlined text-[20px]">copyright</span>
+<span class="text-xs font-sans">2024 Life Log. All rights reserved.</span>
+</div>
+<div class="flex items-center gap-6">
+<a class="text-gray-400 hover:text-primary transition-colors" href="#">
+<span class="sr-only">Twitter</span>
+<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path></svg>
+</a>
+<a class="text-gray-400 hover:text-primary transition-colors" href="#">
+<span class="sr-only">Instagram</span>
+<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+</div>
+</div>
+</footer>
+</body></html>

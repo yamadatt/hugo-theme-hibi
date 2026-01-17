@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archives | 日々</title>
+<meta name="description" content="">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&amp;family=Noto+Serif+JP:wght@400;500;700;900&amp;family=Noto+Serif:wght@400;500;700;900&amp;family=Noto+Sans:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<meta property="og:url" content="http://localhost:1313/archives/">
+  <meta property="og:site_name" content="日々">
+  <meta property="og:title" content="Archives">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="article">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Archives">
+
+
+<link rel="stylesheet" href="http://localhost:1313/css/main.min.css">
+
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#2c2c2c] dark:text-[#e0e0e0] font-sans transition-colors duration-300 min-h-screen flex flex-col">
+    <header class="sticky top-0 z-50 w-full bg-background-light dark:bg-background-dark border-b border-[#e5e7eb] dark:border-white/5">
+<div class="max-w-3xl mx-auto px-4 md:px-6 h-16 md:h-24 flex items-center justify-between">
+<a class="group flex items-center gap-3" href="/">
+<span class="material-symbols-outlined text-primary text-2xl md:text-3xl opacity-80 group-hover:opacity-100 transition-opacity">spa</span>
+<h1 class="font-display text-xl md:text-2xl font-bold tracking-widest text-gray-800 dark:text-white group-hover:text-primary transition-colors">日々 <span class="text-sm md:text-base font-normal opacity-60 ml-1">Hibi</span></h1>
+</a>
+<div class="hidden md:flex items-center gap-6">
+<nav class="flex items-center gap-6 mr-2">
+    
+    <a class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors tracking-wide" href="/tags/">タグ</a>
+    
+    <a class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors tracking-wide" href="/archives/">アーカイブ</a>
+    
+    <a class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors tracking-wide" href="/about/">プロフィール</a>
+    
+</nav>
+<div class="flex items-center gap-3 pl-6 border-l border-gray-200 dark:border-white/10">
+<button id="theme-toggle" aria-label="Toggle Theme" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/5 text-gray-600 dark:text-gray-400 transition-colors">
+<span class="material-symbols-outlined text-[20px]">contrast</span>
+</button>
+<button id="search-toggle" aria-label="検索" class="group flex items-center gap-1 pl-2 pr-3 py-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/5 text-gray-600 dark:text-gray-400 transition-all">
+<span class="material-symbols-outlined text-[20px] group-hover:text-primary">search</span>
+<span class="text-xs font-medium pt-0.5 group-hover:text-primary">検索</span>
+</button>
+</div>
+</div>
+<button id="menu-toggle" aria-label="Menu" class="md:hidden p-2 text-gray-700 dark:text-gray-300">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+
+<div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-background-light dark:bg-background-dark border-b border-gray-200 dark:border-white/5 p-4 shadow-lg">
+    <nav class="flex flex-col gap-4">
+         
+        <a class="text-base font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="/tags/">タグ</a>
+        
+        <a class="text-base font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="/archives/">アーカイブ</a>
+        
+        <a class="text-base font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="/about/">プロフィール</a>
+        
+    </nav>
+</div>
+</header>
+
+    <main class="flex-grow flex flex-col items-center pt-10 md:pt-16 pb-20 md:pb-24 px-4 md:px-6 w-full max-w-3xl mx-auto">
+        
+<div class="flex-1 w-full max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-12 px-6 md:px-10 py-12 md:py-20">
+    <aside class="hidden lg:block w-32 shrink-0 relative">
+        <div class="sticky top-32 flex flex-col gap-1 border-l-2 border-[#e6e8e8] dark:border-gray-800 pl-6 py-2">
+            <span class="text-xs font-sans uppercase tracking-widest text-gray-400 mb-2">Timeline</span>
+            
+            <a class="text-gray-500 dark:text-gray-500 hover:text-primary dark:hover:text-primary hover:translate-x-1 transition-all text-sm font-sans" href="#2026">2026年</a>
+            
+            <a class="text-gray-500 dark:text-gray-500 hover:text-primary dark:hover:text-primary hover:translate-x-1 transition-all text-sm font-sans" href="#2025">2025年</a>
+            
+            <a class="text-gray-500 dark:text-gray-500 hover:text-primary dark:hover:text-primary hover:translate-x-1 transition-all text-sm font-sans" href="#0001">0001年</a>
+            
+        </div>
+    </aside>
+    
+    <div class="flex-1 max-w-[720px] mx-auto w-full">
+        <div class="mb-12 md:mb-20 space-y-4">
+            <h2 class="text-4xl md:text-5xl font-black tracking-tight text-gray-800 dark:text-white">Archive</h2>
+            <p class="text-lg text-gray-500 dark:text-gray-400 font-normal leading-relaxed max-w-lg">
+                A chronological collection of moments, thoughts, and fragments of daily life.
+                <span class="block text-sm mt-1 opacity-70 font-sans">日々の断片と記憶の記録。</span>
+            </p>
+        </div>
+
+        <div class="lg:hidden mb-16 relative w-full">
+            <div class="flex items-center overflow-x-auto gap-6 pb-4 border-b border-dashed border-gray-200 dark:border-gray-800 no-scrollbar -mx-6 px-6">
+                <span class="text-xs font-sans uppercase tracking-widest text-gray-400 shrink-0 sticky left-0 bg-background-light dark:bg-background-dark pr-4 z-10">Timeline</span>
+                
+                <a class="text-gray-400 hover:text-primary font-medium text-lg whitespace-nowrap shrink-0 transition-colors" href="#2026">2026</a>
+                
+                <a class="text-gray-400 hover:text-primary font-medium text-lg whitespace-nowrap shrink-0 transition-colors" href="#2025">2025</a>
+                
+                <a class="text-gray-400 hover:text-primary font-medium text-lg whitespace-nowrap shrink-0 transition-colors" href="#0001">0001</a>
+                
+            </div>
+        </div>
+
+        
+        <section class="mb-24 relative group/year" id="2026">
+            <div class="absolute -left-2 md:-left-16 -top-6 md:-top-10 text-[80px] md:text-[120px] font-bold text-gray-200/50 dark:text-gray-800/20 select-none pointer-events-none -z-10 transition-colors">
+                2026
+            </div>
+            <div class="flex items-center gap-4 mb-10">
+                <h3 class="text-3xl font-bold text-primary font-sans">2026年</h3>
+                <div class="h-px bg-primary/20 flex-1"></div>
+            </div>
+            
+            
+            <div class="mb-12 pl-2 md:pl-4 border-l border-dashed border-gray-300 dark:border-gray-800 ml-2 md:ml-0">
+                <h4 class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-6 flex items-center gap-2 font-sans">
+                    <span class="w-2 h-2 rounded-full bg-primary/40"></span> 1月
+                </h4>
+                <div class="flex flex-col gap-0">
+                    
+                    <a class="group flex flex-col sm:flex-row items-start gap-4 sm:gap-6 py-6 border-b border-[#f1f3f3] dark:border-gray-800/50 hover:border-primary/20 transition-all hover:bg-white/40 dark:hover:bg-white/5 -mx-4 px-4 rounded-xl" href="/posts/midnight-coding/">
+                        <span class="font-sans text-xs font-bold text-gray-400 dark:text-gray-500 sm:w-12 shrink-0 pt-2 group-hover:text-primary transition-colors">01.15</span>
+                        
+                        
+                        
+                            
+                        
+
+                        
+                        <div class="w-full sm:w-32 h-40 sm:h-20 shrink-0 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800">
+                            <img alt="" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="/posts/midnight-coding/featured_hu_9367a645a334ef77.webp"/>
+                        </div>
+                        
+
+                        <div class="flex flex-col gap-1.5 flex-1 min-w-0">
+                            <span class="text-lg font-bold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors leading-snug">深夜のプログラミング</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400 font-sans opacity-80 group-hover:opacity-100 transition-opacity line-clamp-2">世界が寝静まった頃、コードを書くのが好きだ。ゾーンに入った時の全能感。</span>
+                        </div>
+                    </a>
+                    
+                    <a class="group flex flex-col sm:flex-row items-start gap-4 sm:gap-6 py-6 border-b border-[#f1f3f3] dark:border-gray-800/50 hover:border-primary/20 transition-all hover:bg-white/40 dark:hover:bg-white/5 -mx-4 px-4 rounded-xl" href="/posts/ikebukuro-hamburger/">
+                        <span class="font-sans text-xs font-bold text-gray-400 dark:text-gray-500 sm:w-12 shrink-0 pt-2 group-hover:text-primary transition-colors">01.12</span>
+                        
+                        
+                        
+                            
+                        
+
+                        
+                        <div class="w-full sm:w-32 h-40 sm:h-20 shrink-0 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800">
+                            <img alt="" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="/posts/ikebukuro-hamburger/featured_hu_b1ca8d977c8ab018.webp"/>
+                        </div>
+                        
+
+                        <div class="flex flex-col gap-1.5 flex-1 min-w-0">
+                            <span class="text-lg font-bold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors leading-snug">みらいと池袋でハンバーグ</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400 font-sans opacity-80 group-hover:opacity-100 transition-opacity line-clamp-2">久しぶりに友人のみらいと池袋へ。話題のハンバーグ屋さんは行列だったけれど、並んだ甲斐があった。</span>
+                        </div>
+                    </a>
+                    
+                    <a class="group flex flex-col sm:flex-row items-start gap-4 sm:gap-6 py-6 border-b border-[#f1f3f3] dark:border-gray-800/50 hover:border-primary/20 transition-all hover:bg-white/40 dark:hover:bg-white/5 -mx-4 px-4 rounded-xl" href="/posts/desk-minimalism/">
+                        <span class="font-sans text-xs font-bold text-gray-400 dark:text-gray-500 sm:w-12 shrink-0 pt-2 group-hover:text-primary transition-colors">01.05</span>
+                        
+                        
+                        
+                            
+                        
+
+                        
+                        <div class="w-full sm:w-32 h-40 sm:h-20 shrink-0 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800">
+                            <img alt="" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="/posts/desk-minimalism/featured_hu_daf89bc78a91224f.webp"/>
+                        </div>
+                        
+
+                        <div class="flex flex-col gap-1.5 flex-1 min-w-0">
+                            <span class="text-lg font-bold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors leading-snug">デスク環境のミニマリズム</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400 font-sans opacity-80 group-hover:opacity-100 transition-opacity line-clamp-2">新年を迎えて、デスク周りを整理した。必要なものだけを残し、ノイズを減らす。</span>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+            
+        </section>
+        
+        <section class="mb-24 relative group/year" id="2025">
+            <div class="absolute -left-2 md:-left-16 -top-6 md:-top-10 text-[80px] md:text-[120px] font-bold text-gray-200/50 dark:text-gray-800/20 select-none pointer-events-none -z-10 transition-colors">
+                2025
+            </div>
+            <div class="flex items-center gap-4 mb-10">
+                <h3 class="text-3xl font-bold text-primary font-sans">2025年</h3>
+                <div class="h-px bg-primary/20 flex-1"></div>
+            </div>
+            
+            
+            <div class="mb-12 pl-2 md:pl-4 border-l border-dashed border-gray-300 dark:border-gray-800 ml-2 md:ml-0">
+                <h4 class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-6 flex items-center gap-2 font-sans">
+                    <span class="w-2 h-2 rounded-full bg-primary/40"></span> 12月
+                </h4>
+                <div class="flex flex-col gap-0">
+                    
+                    <a class="group flex flex-col sm:flex-row items-start gap-4 sm:gap-6 py-6 border-b border-[#f1f3f3] dark:border-gray-800/50 hover:border-primary/20 transition-all hover:bg-white/40 dark:hover:bg-white/5 -mx-4 px-4 rounded-xl" href="/posts/new-camera/">
+                        <span class="font-sans text-xs font-bold text-gray-400 dark:text-gray-500 sm:w-12 shrink-0 pt-2 group-hover:text-primary transition-colors">12.20</span>
+                        
+                        
+                        
+                            
+                        
+
+                        
+                        <div class="w-full sm:w-32 h-40 sm:h-20 shrink-0 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800">
+                            <img alt="" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="/posts/new-camera/featured_hu_b359bf8fd51ed4b.webp"/>
+                        </div>
+                        
+
+                        <div class="flex flex-col gap-1.5 flex-1 min-w-0">
+                            <span class="text-lg font-bold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors leading-snug">新しいカメラを買った</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400 font-sans opacity-80 group-hover:opacity-100 transition-opacity line-clamp-2">ついに念願のミラーレス一眼を手に入れた。シャッターを切る感触、手に馴染む重み。すべてが愛おしい。</span>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="mb-12 pl-2 md:pl-4 border-l border-dashed border-gray-300 dark:border-gray-800 ml-2 md:ml-0">
+                <h4 class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-6 flex items-center gap-2 font-sans">
+                    <span class="w-2 h-2 rounded-full bg-primary/40"></span> 11月
+                </h4>
+                <div class="flex flex-col gap-0">
+                    
+                    <a class="group flex flex-col sm:flex-row items-start gap-4 sm:gap-6 py-6 border-b border-[#f1f3f3] dark:border-gray-800/50 hover:border-primary/20 transition-all hover:bg-white/40 dark:hover:bg-white/5 -mx-4 px-4 rounded-xl" href="/posts/sound-of-wind/">
+                        <span class="font-sans text-xs font-bold text-gray-400 dark:text-gray-500 sm:w-12 shrink-0 pt-2 group-hover:text-primary transition-colors">11.15</span>
+                        
+                        
+                        
+                            
+                        
+
+                        
+                        <div class="w-full sm:w-32 h-40 sm:h-20 shrink-0 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800">
+                            <img alt="" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="/posts/sound-of-wind/featured_hu_c8ce431728aba336.webp"/>
+                        </div>
+                        
+
+                        <div class="flex flex-col gap-1.5 flex-1 min-w-0">
+                            <span class="text-lg font-bold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors leading-snug">風の音を聴く</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400 font-sans opacity-80 group-hover:opacity-100 transition-opacity line-clamp-2">河川敷に座って、ただ風の音を聴いていた。ススキがざわざわと揺れ、雲が流れていく。</span>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="mb-12 pl-2 md:pl-4 border-l border-dashed border-gray-300 dark:border-gray-800 ml-2 md:ml-0">
+                <h4 class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-6 flex items-center gap-2 font-sans">
+                    <span class="w-2 h-2 rounded-full bg-primary/40"></span> 10月
+                </h4>
+                <div class="flex flex-col gap-0">
+                    
+                    <a class="group flex flex-col sm:flex-row items-start gap-4 sm:gap-6 py-6 border-b border-[#f1f3f3] dark:border-gray-800/50 hover:border-primary/20 transition-all hover:bg-white/40 dark:hover:bg-white/5 -mx-4 px-4 rounded-xl" href="/posts/weekend-museum/">
+                        <span class="font-sans text-xs font-bold text-gray-400 dark:text-gray-500 sm:w-12 shrink-0 pt-2 group-hover:text-primary transition-colors">10.30</span>
+                        
+                        
+                        
+                            
+                        
+
+                        
+                        <div class="w-full sm:w-32 h-40 sm:h-20 shrink-0 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800">
+                            <img alt="" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="/posts/weekend-museum/featured_hu_a5c35b157cc2a8db.webp"/>
+                        </div>
+                        
+
+                        <div class="flex flex-col gap-1.5 flex-1 min-w-0">
+                            <span class="text-lg font-bold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors leading-snug">週末の美術館</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400 font-sans opacity-80 group-hover:opacity-100 transition-opacity line-clamp-2">現代アートの展覧会へ。理解しようとするのではなく、ただ感じること。</span>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="mb-12 pl-2 md:pl-4 border-l border-dashed border-gray-300 dark:border-gray-800 ml-2 md:ml-0">
+                <h4 class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-6 flex items-center gap-2 font-sans">
+                    <span class="w-2 h-2 rounded-full bg-primary/40"></span> 9月
+                </h4>
+                <div class="flex flex-col gap-0">
+                    
+                    <a class="group flex flex-col sm:flex-row items-start gap-4 sm:gap-6 py-6 border-b border-[#f1f3f3] dark:border-gray-800/50 hover:border-primary/20 transition-all hover:bg-white/40 dark:hover:bg-white/5 -mx-4 px-4 rounded-xl" href="/posts/handwritten-notes/">
+                        <span class="font-sans text-xs font-bold text-gray-400 dark:text-gray-500 sm:w-12 shrink-0 pt-2 group-hover:text-primary transition-colors">09.10</span>
+                        
+                        
+                        
+                            
+                        
+
+                        
+                        <div class="w-full sm:w-32 h-40 sm:h-20 shrink-0 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800">
+                            <img alt="" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="/posts/handwritten-notes/featured_hu_2dcc863f5a503ab0.webp"/>
+                        </div>
+                        
+
+                        <div class="flex flex-col gap-1.5 flex-1 min-w-0">
+                            <span class="text-lg font-bold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors leading-snug">手書きのノートについて</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400 font-sans opacity-80 group-hover:opacity-100 transition-opacity line-clamp-2">デジタル全盛の時代だからこそ、手書きの良さを見直している。インクの滲み、紙の感触。</span>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="mb-12 pl-2 md:pl-4 border-l border-dashed border-gray-300 dark:border-gray-800 ml-2 md:ml-0">
+                <h4 class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-6 flex items-center gap-2 font-sans">
+                    <span class="w-2 h-2 rounded-full bg-primary/40"></span> 5月
+                </h4>
+                <div class="flex flex-col gap-0">
+                    
+                    <a class="group flex flex-col sm:flex-row items-start gap-4 sm:gap-6 py-6 border-b border-[#f1f3f3] dark:border-gray-800/50 hover:border-primary/20 transition-all hover:bg-white/40 dark:hover:bg-white/5 -mx-4 px-4 rounded-xl" href="/posts/rainy-day-coffee/">
+                        <span class="font-sans text-xs font-bold text-gray-400 dark:text-gray-500 sm:w-12 shrink-0 pt-2 group-hover:text-primary transition-colors">05.10</span>
+                        
+                        
+                        
+                            
+                        
+
+                        
+                        <div class="w-full sm:w-32 h-40 sm:h-20 shrink-0 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800">
+                            <img alt="" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="/posts/rainy-day-coffee/featured_hu_d222b62c6fd503d5.webp"/>
+                        </div>
+                        
+
+                        <div class="flex flex-col gap-1.5 flex-1 min-w-0">
+                            <span class="text-lg font-bold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors leading-snug">雨の日の静寂とコーヒー</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400 font-sans opacity-80 group-hover:opacity-100 transition-opacity line-clamp-2">窓を打つ雨音が、古い家の記憶を呼び覚ますようなリズムを刻んでいる。外の世界が雨に洗われていく間、家の中で温かいコーヒーを淹れる時間は、何ものにも代えがたい贅沢だ。</span>
+                        </div>
+                    </a>
+                    
+                    <a class="group flex flex-col sm:flex-row items-start gap-4 sm:gap-6 py-6 border-b border-[#f1f3f3] dark:border-gray-800/50 hover:border-primary/20 transition-all hover:bg-white/40 dark:hover:bg-white/5 -mx-4 px-4 rounded-xl" href="/posts/jimbocho-books/">
+                        <span class="font-sans text-xs font-bold text-gray-400 dark:text-gray-500 sm:w-12 shrink-0 pt-2 group-hover:text-primary transition-colors">05.05</span>
+                        
+                        
+                        
+                            
+                        
+
+                        
+                        <div class="w-full sm:w-32 h-40 sm:h-20 shrink-0 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800">
+                            <img alt="" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="/posts/jimbocho-books/featured_hu_d271219d9a3bc2e0.webp"/>
+                        </div>
+                        
+
+                        <div class="flex flex-col gap-1.5 flex-1 min-w-0">
+                            <span class="text-lg font-bold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors leading-snug">神保町の古書店巡り</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400 font-sans opacity-80 group-hover:opacity-100 transition-opacity line-clamp-2">完璧な照明と、紙とインクの匂いが漂う新しいカフェを見つけた。本棚には読み込まれた文庫本が並び、背表紙は長い年月を感じさせる。</span>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="mb-12 pl-2 md:pl-4 border-l border-dashed border-gray-300 dark:border-gray-800 ml-2 md:ml-0">
+                <h4 class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-6 flex items-center gap-2 font-sans">
+                    <span class="w-2 h-2 rounded-full bg-primary/40"></span> 4月
+                </h4>
+                <div class="flex flex-col gap-0">
+                    
+                    <a class="group flex flex-col sm:flex-row items-start gap-4 sm:gap-6 py-6 border-b border-[#f1f3f3] dark:border-gray-800/50 hover:border-primary/20 transition-all hover:bg-white/40 dark:hover:bg-white/5 -mx-4 px-4 rounded-xl" href="/posts/morning-walk/">
+                        <span class="font-sans text-xs font-bold text-gray-400 dark:text-gray-500 sm:w-12 shrink-0 pt-2 group-hover:text-primary transition-colors">04.28</span>
+                        
+                        
+                        
+                            
+                        
+
+                        
+                        <div class="w-full sm:w-32 h-40 sm:h-20 shrink-0 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800">
+                            <img alt="" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="/posts/morning-walk/featured_hu_2bd7071964f6d64e.webp"/>
+                        </div>
+                        
+
+                        <div class="flex flex-col gap-1.5 flex-1 min-w-0">
+                            <span class="text-lg font-bold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors leading-snug">朝の散歩道と季節の変わり目</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400 font-sans opacity-80 group-hover:opacity-100 transition-opacity line-clamp-2">空気が澄み渡り、季節の変わり目を告げているように感じる。正午でも影が長くなり、銀杏の葉が少しずつ色づき始めている。</span>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+            
+        </section>
+        
+        <section class="mb-24 relative group/year" id="0001">
+            <div class="absolute -left-2 md:-left-16 -top-6 md:-top-10 text-[80px] md:text-[120px] font-bold text-gray-200/50 dark:text-gray-800/20 select-none pointer-events-none -z-10 transition-colors">
+                0001
+            </div>
+            <div class="flex items-center gap-4 mb-10">
+                <h3 class="text-3xl font-bold text-primary font-sans">0001年</h3>
+                <div class="h-px bg-primary/20 flex-1"></div>
+            </div>
+            
+            
+            <div class="mb-12 pl-2 md:pl-4 border-l border-dashed border-gray-300 dark:border-gray-800 ml-2 md:ml-0">
+                <h4 class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-6 flex items-center gap-2 font-sans">
+                    <span class="w-2 h-2 rounded-full bg-primary/40"></span> 1月
+                </h4>
+                <div class="flex flex-col gap-0">
+                    
+                    <a class="group flex flex-col sm:flex-row items-start gap-4 sm:gap-6 py-6 border-b border-[#f1f3f3] dark:border-gray-800/50 hover:border-primary/20 transition-all hover:bg-white/40 dark:hover:bg-white/5 -mx-4 px-4 rounded-xl" href="/archives/">
+                        <span class="font-sans text-xs font-bold text-gray-400 dark:text-gray-500 sm:w-12 shrink-0 pt-2 group-hover:text-primary transition-colors">01.01</span>
+                        
+                        
+                        
+                            
+                        
+
+                        
+
+                        <div class="flex flex-col gap-1.5 flex-1 min-w-0">
+                            <span class="text-lg font-bold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors leading-snug">Archives</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400 font-sans opacity-80 group-hover:opacity-100 transition-opacity line-clamp-2"></span>
+                        </div>
+                    </a>
+                    
+                    <a class="group flex flex-col sm:flex-row items-start gap-4 sm:gap-6 py-6 border-b border-[#f1f3f3] dark:border-gray-800/50 hover:border-primary/20 transition-all hover:bg-white/40 dark:hover:bg-white/5 -mx-4 px-4 rounded-xl" href="/about/">
+                        <span class="font-sans text-xs font-bold text-gray-400 dark:text-gray-500 sm:w-12 shrink-0 pt-2 group-hover:text-primary transition-colors">01.01</span>
+                        
+                        
+                        
+                            
+                        
+
+                        
+
+                        <div class="flex flex-col gap-1.5 flex-1 min-w-0">
+                            <span class="text-lg font-bold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors leading-snug">Yuki Tanaka</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400 font-sans opacity-80 group-hover:opacity-100 transition-opacity line-clamp-2"><p>Hello. I&rsquo;m Yuki, a designer living quietly in a small corner of Tokyo.
+For as long as I can remember, I have been fascinated by the beauty of &ldquo;less.&rdquo;
+Whether it&rsquo;s the interface of a digital product or the arrangement of objects on a desk,
+I believe that clarity brings peace.</p>
+<p>This blog, <span class="italic text-primary">Life Log</span>, is a collection of my daily observations.
+It serves as a digital garden where I cultivate thoughts on minimalism, technology, and the
+often overlooked quiet moments of city life. I write not to teach, but to remember and reflect.</p></span>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+            
+        </section>
+        
+    </div>
+</div>
+
+    </main>
+    <footer class="w-full bg-white dark:bg-[#111315] border-t border-gray-100 dark:border-white/5 py-10 md:py-12">
+<div class="max-w-3xl mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+<div class="flex flex-col gap-2 md:gap-3 text-left">
+<p class="font-display text-lg font-bold text-gray-900 dark:text-white tracking-widest">日々</p>
+<p class="text-xs text-gray-500 dark:text-gray-500">
+                    © 2026 日々. All rights reserved.
+                </p>
+</div>
+<div class="flex gap-8 w-full md:w-auto pt-2 md:pt-0 border-t border-dashed border-gray-100 md:border-0 md:border-t-0 dark:border-white/5">
+<a aria-label="RSS Feed" class="text-gray-400 hover:text-primary transition-colors flex items-center gap-2 mt-4 md:mt-0" href="/index.xml">
+<span class="material-symbols-outlined">rss_feed</span>
+<span class="text-xs font-medium">RSS</span>
+</a>
+<a aria-label="Twitter" class="text-gray-400 hover:text-primary transition-colors flex items-center gap-2 mt-4 md:mt-0" href="/about/">
+<span class="material-symbols-outlined">alternate_email</span>
+<span class="text-xs font-medium">連絡先</span>
+</a>
+</div>
+</div>
+</footer>
+    <div id="search-modal" class="hidden fixed inset-0 z-[100] bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md transition-opacity duration-300 opacity-0">
+    <div class="container mx-auto max-w-3xl px-4 py-8 h-full flex flex-col">
+        <div class="flex items-center justify-between mb-8">
+            <h2 class="text-2xl font-display font-bold text-gray-800 dark:text-white">検索</h2>
+            <button id="search-close" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/5 text-gray-600 dark:text-gray-400 transition-colors">
+                <span class="material-symbols-outlined text-3xl">close</span>
+            </button>
+        </div>
+        <div class="relative mb-8">
+            <span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-gray-400">search</span>
+            <input type="text" id="search-input" placeholder="キーワードを入力..." class="w-full pl-12 pr-4 py-4 bg-transparent border-b-2 border-gray-200 dark:border-white/10 text-xl text-gray-800 dark:text-white placeholder-gray-400 focus:outline-none focus:border-primary transition-colors font-sans">
+        </div>
+        <div id="search-results" class="flex-grow overflow-y-auto">
+            
+            <p class="text-center text-gray-500 mt-8">記事を検索できます。</p>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="http://localhost:1313/js/theme.min.js"></script>
+    
+    <script src="http://localhost:1313/js/search.min.js"></script>
+    
+    <script src="http://localhost:1313/js/menu.min.js"></script>
+</body>
+</html>

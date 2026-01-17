@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>読書 on 日々</title>
+    <link>https://example.org/tags/%E8%AA%AD%E6%9B%B8/</link>
+    <description>Recent content in 読書 on 日々</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 05 May 2025 13:00:00 +0900</lastBuildDate>
+    <atom:link href="https://example.org/tags/%E8%AA%AD%E6%9B%B8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>神保町の古書店巡り</title>
+      <link>https://example.org/posts/jimbocho-books/</link>
+      <pubDate>Mon, 05 May 2025 13:00:00 +0900</pubDate>
+      <guid>https://example.org/posts/jimbocho-books/</guid>
+      <description>完璧な照明と、紙とインクの匂いが漂う新しいカフェを見つけた。本棚には読み込まれた文庫本が並び、背表紙は長い年月を感じさせる。</description>
+    </item>
+  </channel>
+</rss>

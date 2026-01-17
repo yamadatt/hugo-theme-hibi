@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "ja" }}">
+<head>
+    {{ partial "head.html" . }}
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#2c2c2c] dark:text-[#e0e0e0] font-sans transition-colors duration-300 min-h-screen flex flex-col">
+    {{ partial "header.html" . }}
+    <main class="flex-grow flex flex-col items-center pt-10 md:pt-16 pb-20 md:pb-24 px-4 md:px-6 w-full max-w-3xl mx-auto">
+        {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+    {{ partial "search.html" . }}
+    {{ $theme := resources.Get "js/theme.js" | resources.Minify }}
+    {{ if $theme }}<script src="{{ $theme.Permalink }}"></script>{{ end }}
+    {{ $search := resources.Get "js/search.js" | resources.Minify }}
+    {{ if $search }}<script src="{{ $search.Permalink }}"></script>{{ end }}
+    {{ $menu := resources.Get "js/menu.js" | resources.Minify }}
+    {{ if $menu }}<script src="{{ $menu.Permalink }}"></script>{{ end }}
+</body>
+</html>

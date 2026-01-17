@@ -1,0 +1,84 @@
+{{ define "main" }}
+<section class="w-full mb-12 text-center">
+    <h1 class="font-display text-3xl font-bold text-gray-800 dark:text-white mb-2">
+        #{{ .Title }}
+    </h1>
+    <p class="text-gray-500 dark:text-gray-400">{{ len .Pages }} posts</p>
+</section>
+
+<div class="flex flex-col gap-16 md:gap-20 w-full max-w-3xl mx-auto">
+    {{ range .Paginator.Pages }}
+    <article class="group flex flex-col gap-4 md:gap-6">
+        {{ $image := "" }}
+        {{ with .Resources.GetMatch .Params.featuredImagePreview }}
+            {{ $image = .Resize "640x webp q80" }}
+        {{ else }}
+            {{ with .Resources.GetMatch .Params.featuredImage }}
+                {{ $image = .Resize "640x webp q80" }}
+            {{ end }}
+        {{ end }}
+
+        {{ with $image }}
+        <a class="overflow-hidden rounded-md" href="{{ $.Permalink }}">
+            <img alt="{{ $.Params.title }}" class="w-full h-[240px] md:h-[320px] object-cover transform group-hover:scale-[1.01] transition-transform duration-700 ease-out" src="{{ .RelPermalink }}"/>
+        </a>
+        {{ end }}
+        
+        <div class="flex flex-col gap-2 md:gap-3">
+            <div class="flex items-center gap-3">
+                <time class="font-sans text-xs font-bold tracking-widest text-primary/80 uppercase" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time>
+                <span class="w-8 h-px bg-gray-200 dark:bg-white/10"></span>
+                <span class="text-xs text-gray-400">
+                    {{ with .Params.tags }}
+                        {{ index . 0 }}
+                    {{ else }}
+                        Uncategorized
+                    {{ end }}
+                </span>
+            </div>
+            <h3 class="font-display text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors cursor-pointer leading-snug mt-1">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </h3>
+            <p class="font-sans text-[15px] md:text-base leading-7 md:leading-loose text-gray-600 dark:text-gray-400 mt-1 line-clamp-3 md:line-clamp-none">
+                {{ .Summary | truncate 150 }}
+            </p>
+            <div class="pt-2 md:pt-3">
+                <a class="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-primary/70 transition-colors border-b border-transparent hover:border-primary/30 pb-0.5" href="{{ .RelPermalink }}">
+                    続きを読む
+                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </article>
+    {{ end }}
+</div>
+
+<!-- Pagination -->
+{{ if gt .Paginator.TotalPages 1 }}
+<div class="w-full mt-16 md:mt-24 pt-10 md:pt-12 border-t border-gray-200 dark:border-white/10 flex justify-center items-center">
+    <nav aria-label="Pagination" class="flex items-center gap-2 md:gap-3">
+        {{ if .Paginator.HasPrev }}
+        <a class="mr-2 md:mr-4 group flex items-center gap-1 h-12 md:h-10 px-3 text-base md:text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors font-sans" href="{{ .Paginator.Prev.URL }}">
+            <span class="material-symbols-outlined text-[20px] md:text-[18px] group-hover:-translate-x-0.5 transition-transform">chevron_left</span>
+            <span>前へ</span>
+        </a>
+        {{ end }}
+
+        {{ range .Paginator.Pagers }}
+            {{ if eq . .Paginator }}
+            <span class="flex items-center justify-center w-12 h-12 md:w-10 md:h-10 rounded-full bg-[#CCCCCC] text-gray-800 text-base md:text-sm font-bold font-sans cursor-default shadow-sm border border-gray-300">{{ .PageNumber }}</span>
+            {{ else }}
+            <a class="flex items-center justify-center w-12 h-12 md:w-10 md:h-10 rounded-full bg-[#CCCCCC] text-gray-500 hover:text-primary transition-colors text-base md:text-sm font-medium font-sans border border-transparent" href="{{ .URL }}">{{ .PageNumber }}</a>
+            {{ end }}
+        {{ end }}
+        
+        {{ if .Paginator.HasNext }}
+        <a class="ml-2 md:ml-4 group flex items-center gap-1 h-12 md:h-10 px-3 text-base md:text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors font-sans" href="{{ .Paginator.Next.URL }}">
+            <span>次へ</span>
+            <span class="material-symbols-outlined text-[20px] md:text-[18px] group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+        </a>
+        {{ end }}
+    </nav>
+</div>
+{{ end }}
+{{ end }}

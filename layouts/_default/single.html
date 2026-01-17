@@ -1,0 +1,75 @@
+{{ define "main" }}
+<article class="max-w-[720px] mx-auto w-full flex flex-col">
+    <!-- Hero Image -->
+    {{ with .Resources.GetMatch .Params.featuredImage }}
+    {{ $image := .Resize "1280x webp q85" }}
+    <div class="w-full mb-10 md:mb-14">
+        <div class="w-full aspect-[21/9] bg-center bg-no-repeat bg-cover rounded-xl shadow-sm overflow-hidden relative" style='background-image: url("{{ $image.RelPermalink }}");'>
+            <div class="absolute inset-0 bg-black/10 dark:bg-black/20"></div>
+        </div>
+    </div>
+    {{ end }}
+
+    <!-- Article Header -->
+    <div class="text-center mb-12">
+        <!-- Tags -->
+        {{ with .Params.tags }}
+        <div class="flex flex-wrap justify-center gap-3 mb-6">
+            {{ range . }}
+            <a href="{{ "tags/" | relLangURL }}{{ . | urlize }}" class="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 dark:bg-white/10 hover:bg-gray-200 dark:hover:bg-white/20 transition-colors">
+                <span class="text-primary dark:text-gray-300 text-xs font-medium tracking-wide">#{{ . }}</span>
+            </a>
+            {{ end }}
+        </div>
+        {{ end }}
+
+        <!-- Title -->
+        <h1 class="text-3xl md:text-4xl lg:text-[40px] font-bold leading-tight md:leading-[1.3] text-primary dark:text-white tracking-wide mb-4 font-display">
+            {{ .Title }}
+        </h1>
+        {{ with .Params.subtitle }}
+        <p class="text-lg md:text-xl text-gray-500 dark:text-gray-400 font-light font-display opacity-80 mb-6">{{ . }}</p>
+        {{ end }}
+
+        <!-- Date -->
+        <div class="flex items-center justify-center gap-2 text-gray-500 dark:text-gray-400 text-sm tracking-widest uppercase">
+            <span class="material-symbols-outlined text-[16px] align-text-bottom">calendar_today</span>
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年1月2日" }}</time>
+        </div>
+    </div>
+
+    <!-- Article Body -->
+    <div class="prose prose-lg dark:prose-invert max-w-none font-light leading-loose">
+        {{ .Content }}
+    </div>
+
+    <div class="w-full h-px bg-gray-200 dark:border-white/10 mb-12 mt-12"></div>
+</article>
+
+<!-- Post Navigation -->
+<nav class="max-w-[720px] mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
+    {{ with .PrevInSection }}
+    <a class="group flex flex-col items-start text-left p-6 rounded-xl border border-transparent hover:border-gray-200 hover:bg-gray-50 dark:hover:border-white/10 dark:hover:bg-white/5 transition-all duration-300" href="{{ .RelPermalink }}">
+        <span class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2 group-hover:text-primary dark:group-hover:text-white transition-colors flex items-center gap-1">
+            <span class="material-symbols-outlined text-sm">arrow_back</span>
+            Previous Post
+        </span>
+        <h3 class="text-lg font-bold text-primary dark:text-white leading-snug group-hover:underline decoration-primary/30 underline-offset-4">
+            {{ .Title }}
+        </h3>
+    </a>
+    {{ end }}
+    
+    {{ with .NextInSection }}
+    <a class="group flex flex-col items-end text-right p-6 rounded-xl border border-transparent hover:border-gray-200 hover:bg-gray-50 dark:hover:border-white/10 dark:hover:bg-white/5 transition-all duration-300" href="{{ .RelPermalink }}">
+        <span class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2 group-hover:text-primary dark:group-hover:text-white transition-colors flex items-center gap-1">
+            Next Post
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </span>
+        <h3 class="text-lg font-bold text-primary dark:text-white leading-snug group-hover:underline decoration-primary/30 underline-offset-4">
+            {{ .Title }}
+        </h3>
+    </a>
+    {{ end }}
+</nav>
+{{ end }}

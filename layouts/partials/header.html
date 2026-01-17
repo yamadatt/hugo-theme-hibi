@@ -1,0 +1,35 @@
+<header class="sticky top-0 z-50 w-full bg-background-light dark:bg-background-dark border-b border-[#e5e7eb] dark:border-white/5">
+<div class="max-w-3xl mx-auto px-4 md:px-6 h-16 md:h-24 flex items-center justify-between">
+<a class="group flex items-center gap-3" href="{{ .Site.Home.RelPermalink }}">
+<span class="material-symbols-outlined text-primary text-2xl md:text-3xl opacity-80 group-hover:opacity-100 transition-opacity">spa</span>
+<h1 class="font-display text-xl md:text-2xl font-bold tracking-widest text-gray-800 dark:text-white group-hover:text-primary transition-colors">{{ .Site.Title }} <span class="text-sm md:text-base font-normal opacity-60 ml-1">Hibi</span></h1>
+</a>
+<div class="hidden md:flex items-center gap-6">
+<nav class="flex items-center gap-6 mr-2">
+    {{ range .Site.Menus.main }}
+    <a class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors tracking-wide" href="{{ .URL }}">{{ .Name }}</a>
+    {{ end }}
+</nav>
+<div class="flex items-center gap-3 pl-6 border-l border-gray-200 dark:border-white/10">
+<button id="theme-toggle" aria-label="Toggle Theme" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/5 text-gray-600 dark:text-gray-400 transition-colors">
+<span class="material-symbols-outlined text-[20px]">contrast</span>
+</button>
+<button id="search-toggle" aria-label="検索" class="group flex items-center gap-1 pl-2 pr-3 py-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/5 text-gray-600 dark:text-gray-400 transition-all">
+<span class="material-symbols-outlined text-[20px] group-hover:text-primary">search</span>
+<span class="text-xs font-medium pt-0.5 group-hover:text-primary">検索</span>
+</button>
+</div>
+</div>
+<button id="menu-toggle" aria-label="Menu" class="md:hidden p-2 text-gray-700 dark:text-gray-300">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-background-light dark:bg-background-dark border-b border-gray-200 dark:border-white/5 p-4 shadow-lg">
+    <nav class="flex flex-col gap-4">
+         {{ range .Site.Menus.main }}
+        <a class="text-base font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+    </nav>
+</div>
+</header>

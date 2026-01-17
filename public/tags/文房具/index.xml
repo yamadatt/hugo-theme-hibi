@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>文房具 on 日々</title>
+    <link>https://example.org/tags/%E6%96%87%E6%88%BF%E5%85%B7/</link>
+    <description>Recent content in 文房具 on 日々</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 10 Sep 2025 22:00:00 +0900</lastBuildDate>
+    <atom:link href="https://example.org/tags/%E6%96%87%E6%88%BF%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>手書きのノートについて</title>
+      <link>https://example.org/posts/handwritten-notes/</link>
+      <pubDate>Wed, 10 Sep 2025 22:00:00 +0900</pubDate>
+      <guid>https://example.org/posts/handwritten-notes/</guid>
+      <description>デジタル全盛の時代だからこそ、手書きの良さを見直している。インクの滲み、紙の感触。</description>
+    </item>
+  </channel>
+</rss>

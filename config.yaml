@@ -1,0 +1,30 @@
+baseURL: 'https://example.org/'
+languageCode: 'ja'
+title: '日々'
+theme: []
+menu:
+  main:
+    - identifier: tags
+      name: タグ
+      url: /tags/
+      weight: 10
+    - identifier: archives
+      name: アーカイブ
+      url: /archives/
+      weight: 20
+    - identifier: about
+      name: プロフィール
+      url: /about/
+      weight: 30
+imaging:
+  quality: 80
+  resampleFilter: lanczos
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
