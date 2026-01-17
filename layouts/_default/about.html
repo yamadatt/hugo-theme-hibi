@@ -23,6 +23,25 @@
                 <p class="font-body text-sm font-medium uppercase tracking-widest text-gray-500 dark:text-gray-400">{{ .Params.subtitle }}</p>
                 <span class="h-px w-8 bg-primary/40"></span>
             </div>
+            
+            <!-- Social Icons -->
+            <div class="flex items-center justify-center gap-6 pt-4">
+                {{ with .Params.social.twitter }}
+                <a href="{{ . }}" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="text-gray-400 hover:text-primary transition-all hover:-translate-y-0.5">
+                    <i class="fa-brands fa-x-twitter text-xl"></i>
+                </a>
+                {{ end }}
+                {{ with .Params.social.instagram }}
+                <a href="{{ . }}" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-gray-400 hover:text-primary transition-all hover:-translate-y-0.5">
+                    <i class="fa-brands fa-instagram text-xl"></i>
+                </a>
+                {{ end }}
+                {{ with .Params.social.github }}
+                <a href="{{ . }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-gray-400 hover:text-primary transition-all hover:-translate-y-0.5">
+                    <i class="fa-brands fa-github text-xl"></i>
+                </a>
+                {{ end }}
+            </div>
         </div>
     </section>
 

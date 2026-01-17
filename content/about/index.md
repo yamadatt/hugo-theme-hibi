@@ -3,6 +3,10 @@ title: "山田 太郎"
 layout: "about"
 subtitle: "Web Designer & Minimalist"
 avatar: "profile.png"
+social:
+  twitter: "https://twitter.com/"
+  instagram: "https://instagram.com/"
+  github: "https://github.com/"
 showKeepInTouch:
   showEmail: false
   email: "you@example.com"
