@@ -11,6 +11,10 @@
 [context.production.environment]
   HUGO_ENV = "production"
 
+# Production deploys from the main branch
+[context.production]
+  command = "hugo --gc --minify -b $URL"
+
 [context.deploy-preview]
   command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
 
