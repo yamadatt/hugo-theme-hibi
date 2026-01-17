@@ -16,7 +16,8 @@
         {{ with .Params.tags }}
         <div class="flex flex-wrap justify-center gap-3 mb-6">
             {{ range . }}
-            <a href="{{ "tags/" | relLangURL }}{{ . | urlize }}" class="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 dark:bg-white/10 hover:bg-gray-200 dark:hover:bg-white/20 transition-colors">
+            {{ $href := print (absLangURL "tags/") (urlize .) "/" }}
+            <a href="{{ $href }}" class="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 dark:bg-white/10 hover:bg-gray-200 dark:hover:bg-white/20 transition-colors">
                 <span class="text-primary dark:text-gray-300 text-xs font-medium tracking-wide">#{{ . }}</span>
             </a>
             {{ end }}

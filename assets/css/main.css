@@ -5,8 +5,8 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --font-display: "Noto Serif JP", "Noto Serif", serif;
-  --font-sans: "Noto Sans JP", "Noto Sans", sans-serif;
+  --font-display: "Lora", "Noto Serif JP", serif;
+  --font-sans: "Inter", "Noto Sans JP", sans-serif;
 
   --color-primary: #3e5c5c;
   --color-background-light: #fcfbf9;
@@ -33,7 +33,7 @@
   body {
     font-feature-settings: "palt";
     -webkit-font-smoothing: antialiased;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.02em;
   }
 
   /* Force solid background for header to prevent transparency */
@@ -76,5 +76,93 @@
   
   p {
     line-height: 1.8;
+  }
+
+  /* Markdown Typography */
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(62, 92, 92, 0.15); /* primary color with low opacity */
+    position: relative;
+  }
+
+  h2::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 2rem;
+    height: 1px;
+    background-color: var(--color-primary);
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+  }
+
+  blockquote {
+    margin: 2rem 0;
+    padding: 1rem 1.5rem;
+    border-left: 3px solid var(--color-primary);
+    background-color: rgba(62, 92, 92, 0.03);
+    font-style: italic;
+    color: #555;
+  }
+
+  .dark blockquote {
+    background-color: rgba(62, 92, 92, 0.1);
+    color: #bbb;
+  }
+
+  ul, ol {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+  }
+
+  li {
+    margin-bottom: 0.75rem;
+    line-height: 1.7;
+  }
+
+  ul li {
+    list-style-type: none;
+    position: relative;
+  }
+
+  ul li::before {
+    content: '';
+    position: absolute;
+    left: -1.25rem;
+    top: 0.65em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    opacity: 0.6;
+  }
+
+  ol {
+    list-style-type: decimal;
+    color: var(--color-primary);
+  }
+
+  ol li::marker {
+    font-weight: 600;
+    font-family: var(--font-display);
+  }
+
+  ol li {
+    color: #2c2c2c;
+  }
+
+  .dark ol li {
+    color: #e0e0e0;
   }
 }
