@@ -2,20 +2,26 @@ baseURL: 'https://example.org/'
 languageCode: 'ja'
 title: '日々'
 theme: []
+pagination:
+  pagerSize: 3
 menu:
   main:
     - identifier: tags
-      name: タグ
+      name: tags
       url: /tags/
       weight: 10
     - identifier: archives
-      name: アーカイブ
+      name: archives
       url: /archives/
       weight: 20
     - identifier: about
-      name: プロフィール
+      name: about
       url: /about/
       weight: 30
+params:
+  #タグ未設定の記事に付与するタグ
+  tagFallbackLabel: 日常
+  headerSubtitle: Hibi
 imaging:
   quality: 80
   resampleFilter: lanczos

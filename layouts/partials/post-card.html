@@ -1,0 +1,54 @@
+{{- $page := .Page -}}
+{{- $imageSize := .ImageSize | default "640x webp q80" -}}
+{{- $imageClass := .ImageClass | default "w-full h-[240px] md:h-[320px] object-cover transform group-hover:scale-[1.01] transition-transform duration-700 ease-out" -}}
+{{- $summaryTruncate := .SummaryTruncate | default 0 -}}
+{{- $tagFallback := .TagFallback | default (.Site.Params.tagFallbackLabel | default "Uncategorized") -}}
+{{- $pageLink := $page.RelPermalink -}}
+{{- $pageTitle := $page.Title -}}
+
+<article class="group flex flex-col gap-4 md:gap-6">
+    {{- $image := "" -}}
+    {{- with $page.Resources.GetMatch $page.Params.featuredImagePreview -}}
+        {{- $image = .Resize $imageSize -}}
+    {{- else -}}
+        {{- with $page.Resources.GetMatch $page.Params.featuredImage -}}
+            {{- $image = .Resize $imageSize -}}
+        {{- end -}}
+    {{- end -}}
+
+    {{- with $image -}}
+    <a class="overflow-hidden rounded-md" href="{{ $pageLink }}">
+        <img alt="{{ $pageTitle }}" class="{{ $imageClass }}" src="{{ .RelPermalink }}"/>
+    </a>
+    {{- end -}}
+
+    <div class="flex flex-col gap-2 md:gap-3">
+        <div class="flex items-center gap-3">
+            <time class="font-sans text-xs font-bold tracking-widest text-primary/80 uppercase" datetime="{{ $page.Date.Format "2006-01-02" }}">{{ $page.Date.Format "2006.01.02" }}</time>
+            <span class="w-8 h-px bg-gray-200 dark:bg-white/10"></span>
+            <span class="text-xs text-gray-400">
+                {{- with $page.Params.tags -}}
+                    {{- index . 0 -}}
+                {{- else -}}
+                    {{- $tagFallback -}}
+                {{- end -}}
+            </span>
+        </div>
+        <h3 class="font-display text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors cursor-pointer leading-snug mt-1">
+            <a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+        </h3>
+        <p class="font-sans text-[15px] md:text-base leading-7 md:leading-loose text-gray-600 dark:text-gray-400 mt-1 line-clamp-3 md:line-clamp-none">
+            {{- if gt $summaryTruncate 0 -}}
+                {{- $page.Summary | truncate $summaryTruncate -}}
+            {{- else -}}
+                {{- $page.Summary -}}
+            {{- end -}}
+        </p>
+        <div class="pt-2 md:pt-3">
+            <a class="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-primary/70 transition-colors border-b border-transparent hover:border-primary/30 pb-0.5" href="{{ $page.RelPermalink }}">
+                続きを読む
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+</article>

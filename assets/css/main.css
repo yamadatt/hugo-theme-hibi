@@ -56,6 +56,23 @@
     font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
     vertical-align: middle;
   }
+
+  /* Ensure theme toggle size is applied even if utility CSS isn't regenerated. */
+  #theme-toggle {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #theme-toggle .material-symbols-outlined {
+    font-family: "Material Symbols Outlined";
+    font-size: 8px;
+    line-height: 1;
+    display: block;
+  }
   
   p {
     line-height: 1.8;
