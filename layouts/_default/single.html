@@ -47,6 +47,8 @@
 </article>
 
 <!-- Post Navigation -->
+{{ $hasPrev := ne .PrevInSection nil }}
+{{ $hasNext := ne .NextInSection nil }}
 <nav class="max-w-[720px] mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
     {{ with .PrevInSection }}
     <a class="group flex flex-col items-start text-left p-6 rounded-xl border border-transparent hover:border-gray-200 hover:bg-gray-50 dark:hover:border-white/10 dark:hover:bg-white/5 transition-all duration-300" href="{{ .RelPermalink }}">
@@ -61,7 +63,7 @@
     {{ end }}
     
     {{ with .NextInSection }}
-    <a class="group flex flex-col items-end text-right p-6 rounded-xl border border-transparent hover:border-gray-200 hover:bg-gray-50 dark:hover:border-white/10 dark:hover:bg-white/5 transition-all duration-300" href="{{ .RelPermalink }}">
+    <a class="group flex flex-col items-end text-right p-6 rounded-xl border border-transparent hover:border-gray-200 hover:bg-gray-50 dark:hover:border-white/10 dark:hover:bg-white/5 transition-all duration-300 {{ if and (not $hasPrev) $hasNext }}md:col-start-2{{ end }}" href="{{ .RelPermalink }}">
         <span class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2 group-hover:text-primary dark:group-hover:text-white transition-colors flex items-center gap-1">
             Next Post
             <span class="material-symbols-outlined text-sm">arrow_forward</span>

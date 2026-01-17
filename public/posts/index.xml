@@ -2,80 +2,87 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 日々</title>
-    <link>https://example.org/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on 日々</description>
     <generator>Hugo</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 15 Jan 2026 02:00:00 +0900</lastBuildDate>
-    <atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Jan 2026 11:51:36 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World</title>
+      <link>http://localhost:1313/posts/hello-world/</link>
+      <pubDate>Sat, 17 Jan 2026 11:51:36 +0900</pubDate>
+      <guid>http://localhost:1313/posts/hello-world/</guid>
+      <description>色々ある</description>
+    </item>
     <item>
       <title>深夜のプログラミング</title>
-      <link>https://example.org/posts/midnight-coding/</link>
+      <link>http://localhost:1313/posts/midnight-coding/</link>
       <pubDate>Thu, 15 Jan 2026 02:00:00 +0900</pubDate>
-      <guid>https://example.org/posts/midnight-coding/</guid>
+      <guid>http://localhost:1313/posts/midnight-coding/</guid>
       <description>世界が寝静まった頃、コードを書くのが好きだ。ゾーンに入った時の全能感。</description>
     </item>
     <item>
       <title>みらいと池袋でハンバーグ</title>
-      <link>https://example.org/posts/ikebukuro-hamburger/</link>
+      <link>http://localhost:1313/posts/ikebukuro-hamburger/</link>
       <pubDate>Mon, 12 Jan 2026 19:00:00 +0900</pubDate>
-      <guid>https://example.org/posts/ikebukuro-hamburger/</guid>
+      <guid>http://localhost:1313/posts/ikebukuro-hamburger/</guid>
       <description>久しぶりに友人のみらいと池袋へ。話題のハンバーグ屋さんは行列だったけれど、並んだ甲斐があった。</description>
     </item>
     <item>
       <title>デスク環境のミニマリズム</title>
-      <link>https://example.org/posts/desk-minimalism/</link>
+      <link>http://localhost:1313/posts/desk-minimalism/</link>
       <pubDate>Mon, 05 Jan 2026 09:00:00 +0900</pubDate>
-      <guid>https://example.org/posts/desk-minimalism/</guid>
+      <guid>http://localhost:1313/posts/desk-minimalism/</guid>
       <description>新年を迎えて、デスク周りを整理した。必要なものだけを残し、ノイズを減らす。</description>
     </item>
     <item>
       <title>新しいカメラを買った</title>
-      <link>https://example.org/posts/new-camera/</link>
+      <link>http://localhost:1313/posts/new-camera/</link>
       <pubDate>Sat, 20 Dec 2025 10:00:00 +0900</pubDate>
-      <guid>https://example.org/posts/new-camera/</guid>
+      <guid>http://localhost:1313/posts/new-camera/</guid>
       <description>ついに念願のミラーレス一眼を手に入れた。シャッターを切る感触、手に馴染む重み。すべてが愛おしい。</description>
     </item>
     <item>
       <title>風の音を聴く</title>
-      <link>https://example.org/posts/sound-of-wind/</link>
+      <link>http://localhost:1313/posts/sound-of-wind/</link>
       <pubDate>Sat, 15 Nov 2025 14:00:00 +0900</pubDate>
-      <guid>https://example.org/posts/sound-of-wind/</guid>
+      <guid>http://localhost:1313/posts/sound-of-wind/</guid>
       <description>河川敷に座って、ただ風の音を聴いていた。ススキがざわざわと揺れ、雲が流れていく。</description>
     </item>
     <item>
       <title>週末の美術館</title>
-      <link>https://example.org/posts/weekend-museum/</link>
+      <link>http://localhost:1313/posts/weekend-museum/</link>
       <pubDate>Thu, 30 Oct 2025 11:00:00 +0900</pubDate>
-      <guid>https://example.org/posts/weekend-museum/</guid>
+      <guid>http://localhost:1313/posts/weekend-museum/</guid>
       <description>現代アートの展覧会へ。理解しようとするのではなく、ただ感じること。</description>
     </item>
     <item>
       <title>手書きのノートについて</title>
-      <link>https://example.org/posts/handwritten-notes/</link>
+      <link>http://localhost:1313/posts/handwritten-notes/</link>
       <pubDate>Wed, 10 Sep 2025 22:00:00 +0900</pubDate>
-      <guid>https://example.org/posts/handwritten-notes/</guid>
+      <guid>http://localhost:1313/posts/handwritten-notes/</guid>
       <description>デジタル全盛の時代だからこそ、手書きの良さを見直している。インクの滲み、紙の感触。</description>
     </item>
     <item>
       <title>雨の日の静寂とコーヒー</title>
-      <link>https://example.org/posts/rainy-day-coffee/</link>
+      <link>http://localhost:1313/posts/rainy-day-coffee/</link>
       <pubDate>Sat, 10 May 2025 15:00:00 +0900</pubDate>
-      <guid>https://example.org/posts/rainy-day-coffee/</guid>
+      <guid>http://localhost:1313/posts/rainy-day-coffee/</guid>
       <description>窓を打つ雨音が、古い家の記憶を呼び覚ますようなリズムを刻んでいる。外の世界が雨に洗われていく間、家の中で温かいコーヒーを淹れる時間は、何ものにも代えがたい贅沢だ。</description>
     </item>
     <item>
       <title>神保町の古書店巡り</title>
-      <link>https://example.org/posts/jimbocho-books/</link>
+      <link>http://localhost:1313/posts/jimbocho-books/</link>
       <pubDate>Mon, 05 May 2025 13:00:00 +0900</pubDate>
-      <guid>https://example.org/posts/jimbocho-books/</guid>
+      <guid>http://localhost:1313/posts/jimbocho-books/</guid>
       <description>完璧な照明と、紙とインクの匂いが漂う新しいカフェを見つけた。本棚には読み込まれた文庫本が並び、背表紙は長い年月を感じさせる。</description>
     </item>
     <item>
       <title>朝の散歩道と季節の変わり目</title>
-      <link>https://example.org/posts/morning-walk/</link>
+      <link>http://localhost:1313/posts/morning-walk/</link>
       <pubDate>Mon, 28 Apr 2025 07:00:00 +0900</pubDate>
-      <guid>https://example.org/posts/morning-walk/</guid>
+      <guid>http://localhost:1313/posts/morning-walk/</guid>
       <description>空気が澄み渡り、季節の変わり目を告げているように感じる。正午でも影が長くなり、銀杏の葉が少しずつ色づき始めている。</description>
     </item>
   </channel>

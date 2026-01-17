@@ -3,7 +3,10 @@
     <section class="flex flex-col items-center gap-8 text-center animate-fade-in">
         <div class="relative group">
             <div class="absolute -inset-1 rounded-full bg-gradient-to-tr from-primary/30 to-gray-200/30 dark:from-primary/30 dark:to-gray-700/30 blur opacity-50 transition duration-1000 group-hover:opacity-75"></div>
-            {{ $avatar := resources.Get "images/avatar.jpg" }}
+            {{ $avatar := .Resources.GetMatch .Params.avatar }}
+            {{ if not $avatar }}
+                {{ $avatar = resources.Get "images/avatar.jpg" }}
+            {{ end }}
             {{ if $avatar }}
             <div class="relative h-40 w-40 overflow-hidden rounded-full border-4 border-white dark:border-background-dark shadow-sm bg-gray-100" style="background-image: url('{{ $avatar.RelPermalink }}'); background-size: cover; background-position: center;">
             </div>
@@ -37,15 +40,31 @@
         {{ end }}
     </div>
 
+    {{ $keep := .Params.showKeepInTouch }}
+    {{ $email := "" }}
+    {{ $showEmail := false }}
+    {{ if eq (printf "%T" $keep) "bool" }}
+        {{ if $keep }}
+            {{ $email = .Params.email | default .Site.Params.email }}
+            {{ $showEmail = .Params.showEmail }}
+        {{ end }}
+    {{ else }}
+        {{ if $keep }}
+            {{ $email = $keep.email | default .Site.Params.email }}
+            {{ $showEmail = $keep.showEmail }}
+        {{ end }}
+    {{ end }}
+    {{ if and $showEmail $email }}
     <section class="flex flex-col gap-6">
         <h3 class="text-center text-xl font-bold text-gray-800 dark:text-white">Keep in Touch</h3>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
-            <a href="mailto:{{ .Site.Params.email }}" class="group flex items-center justify-center gap-3 rounded-xl border border-gray-200 bg-white p-4 text-center transition-all hover:border-primary hover:bg-primary/5 hover:shadow-sm dark:border-white/10 dark:bg-white/5 dark:hover:bg-primary/10">
+            <a href="mailto:{{ $email }}" class="group flex items-center justify-center gap-3 rounded-xl border border-gray-200 bg-white p-4 text-center transition-all hover:border-primary hover:bg-primary/5 hover:shadow-sm dark:border-white/10 dark:bg-white/5 dark:hover:bg-primary/10">
                 <span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">mail</span>
                 <span class="text-sm font-medium text-gray-800 dark:text-white">Email Me</span>
             </a>
             <!-- Other social links can be added here -->
         </div>
     </section>
+    {{ end }}
 </div>
 {{ end }}

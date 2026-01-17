@@ -1,27 +1,24 @@
 ---
-title: "Yuki Tanaka"
+title: "山田 太郎"
 layout: "about"
 subtitle: "Web Designer & Minimalist"
+avatar: "profile.png"
+showKeepInTouch:
+  showEmail: false
+  email: "you@example.com"
 stats:
   - value: "Tokyo"
     label: "Based"
-  - value: "8yr"
-    label: "Designing"
-  - value: "Nikon"
-    label: "Camera"
+  - value: "Rugby"
+    label: "Sports"
+  - value: "Jazz"
+    label: "Music"
   - value: "Coffee"
     label: "Fuel"
 ---
 
-Hello. I'm Yuki, a designer living quietly in a small corner of Tokyo. 
-For as long as I can remember, I have been fascinated by the beauty of "less."
-Whether it's the interface of a digital product or the arrangement of objects on a desk, 
-I believe that clarity brings peace.
+こんにちは。東京の片隅で静かに暮らすデザイナー、山田太郎です。物心ついた頃からずっと、「少ない」ことの美しさに魅了されてきました。デジタル製品のインターフェースでも、机の上の物の配置でも、明瞭さは心の平安をもたらすと信じています。
 
-This blog, <span class="italic text-primary">Life Log</span>, is a collection of my daily observations. 
-It serves as a digital garden where I cultivate thoughts on minimalism, technology, and the 
-often overlooked quiet moments of city life. I write not to teach, but to remember and reflect.
+このサイト「日々」は、私の日々の観察をまとめたものです。ミニマリズム、テクノロジー、そして都市生活の中で見過ごされがちな静かなひとときについて、考えを深めるデジタルガーデンのような役割を果たしています。教えるためではなく、記憶と考察のために書いています。
 
-When I'm not designing interfaces, you can find me brewing coffee, exploring old bookstores in Jimbocho, 
-or simply walking without a destination. I hope my words can offer you a brief moment of calm 
-in your busy day.
+インターフェースデザインをしていない時は、コーヒーを淹れたり、神保町の古書店を巡ったり、ただあてもなく散歩したりしています。忙しい毎日の中で、私の言葉が束の間の安らぎのひとときを提供できれば幸いです。

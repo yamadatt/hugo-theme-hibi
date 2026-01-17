@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const searchToggle = document.getElementById('search-toggle');
+    const searchToggleButtons = document.querySelectorAll('.js-search-toggle');
+    const legacySearchToggle = document.getElementById('search-toggle');
+    const searchToggles = searchToggleButtons.length ? Array.from(searchToggleButtons) : (legacySearchToggle ? [legacySearchToggle] : []);
     const searchClose = document.getElementById('search-close');
     const searchModal = document.getElementById('search-modal');
     const searchInput = document.getElementById('search-input');
@@ -7,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let searchIndex = null;
 
-    if (searchToggle && searchModal && searchClose) {
-        searchToggle.addEventListener('click', () => {
+    if (searchToggles.length && searchModal && searchClose) {
+        const openSearch = () => {
             searchModal.classList.remove('hidden');
             // Small delay to allow display:block to apply before opacity transition
             setTimeout(() => {
@@ -18,6 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     loadSearchIndex();
                 }
             }, 10);
+        };
+
+        searchToggles.forEach((toggle) => {
+            toggle.addEventListener('click', openSearch);
         });
 
         const closeSearch = () => {

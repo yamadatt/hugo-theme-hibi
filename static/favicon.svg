@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Calligraphy brush stroke">
+  <rect width="64" height="64" fill="#f5f5f5"/>
+  <path d="M12 34c2-12 14-20 28-18 10 1 18 8 20 18 2 9-3 18-12 22-10 4-22 0-28-9-3-5-3-8-8-13z" fill="none" stroke="#111111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18 36c4 6 12 10 20 9 6-1 11-4 14-9" fill="none" stroke="#555555" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M36 42c2 6 8 10 14 9 4-1 7-3 9-7" fill="none" stroke="#111111" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

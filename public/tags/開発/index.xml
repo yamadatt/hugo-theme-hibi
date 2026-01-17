@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>開発 on 日々</title>
-    <link>https://example.org/tags/%E9%96%8B%E7%99%BA/</link>
+    <link>http://localhost:1313/tags/%E9%96%8B%E7%99%BA/</link>
     <description>Recent content in 開発 on 日々</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Thu, 15 Jan 2026 02:00:00 +0900</lastBuildDate>
-    <atom:link href="https://example.org/tags/%E9%96%8B%E7%99%BA/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E9%96%8B%E7%99%BA/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>深夜のプログラミング</title>
-      <link>https://example.org/posts/midnight-coding/</link>
+      <link>http://localhost:1313/posts/midnight-coding/</link>
       <pubDate>Thu, 15 Jan 2026 02:00:00 +0900</pubDate>
-      <guid>https://example.org/posts/midnight-coding/</guid>
+      <guid>http://localhost:1313/posts/midnight-coding/</guid>
       <description>世界が寝静まった頃、コードを書くのが好きだ。ゾーンに入った時の全能感。</description>
     </item>
   </channel>

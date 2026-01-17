@@ -9,6 +9,7 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&amp;family=Noto+Serif+JP:wght@400;500;700;900&amp;family=Noto+Serif:wght@400;500;700;900&amp;family=Noto+Sans:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta property="og:url" content="http://localhost:1313/posts/ikebukuro-hamburger/">
   <meta property="og:site_name" content="日々">
   <meta property="og:title" content="みらいと池袋でハンバーグ">
@@ -37,25 +38,29 @@
 <div class="max-w-3xl mx-auto px-4 md:px-6 h-16 md:h-24 flex items-center justify-between">
 <a class="group flex items-center gap-3" href="/">
 <span class="material-symbols-outlined text-primary text-2xl md:text-3xl opacity-80 group-hover:opacity-100 transition-opacity">spa</span>
-<h1 class="font-display text-xl md:text-2xl font-bold tracking-widest text-gray-800 dark:text-white group-hover:text-primary transition-colors">日々 <span class="text-sm md:text-base font-normal opacity-60 ml-1">Hibi</span></h1>
+<h1 class="font-display text-xl md:text-2xl font-bold tracking-widest text-gray-800 dark:text-white group-hover:text-primary transition-colors">
+    日々
+    
+    <span class="text-sm md:text-base font-normal opacity-60 ml-1">Hibi</span>
+    
+</h1>
 </a>
 <div class="hidden md:flex items-center gap-6">
 <nav class="flex items-center gap-6 mr-2">
     
-    <a class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors tracking-wide" href="/tags/">タグ</a>
+    <a class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors tracking-wide" href="/tags/">tags</a>
     
-    <a class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors tracking-wide" href="/archives/">アーカイブ</a>
+    <a class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors tracking-wide" href="/archives/">archives</a>
     
-    <a class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors tracking-wide" href="/about/">プロフィール</a>
+    <a class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors tracking-wide" href="/about/">about</a>
     
 </nav>
 <div class="flex items-center gap-3 pl-6 border-l border-gray-200 dark:border-white/10">
-<button id="theme-toggle" aria-label="Toggle Theme" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/5 text-gray-600 dark:text-gray-400 transition-colors">
-<span class="material-symbols-outlined text-[20px]">contrast</span>
+<button id="theme-toggle" aria-label="Toggle Theme" class="rounded-full hover:bg-gray-100 dark:hover:bg-white/5 text-gray-600 dark:text-gray-400 transition-colors flex items-center justify-center" style="width:20px;height:20px;">
+<span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:16px;line-height:1;display:block;">contrast</span>
 </button>
-<button id="search-toggle" aria-label="検索" class="group flex items-center gap-1 pl-2 pr-3 py-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/5 text-gray-600 dark:text-gray-400 transition-all">
-<span class="material-symbols-outlined text-[20px] group-hover:text-primary">search</span>
-<span class="text-xs font-medium pt-0.5 group-hover:text-primary">検索</span>
+<button id="search-toggle" aria-label="検索" class="js-search-toggle group flex items-center gap-1 px-2 py-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/5 text-gray-600 dark:text-gray-400 transition-all">
+<span class="material-symbols-outlined text-[16px] group-hover:text-primary">search</span>
 </button>
 </div>
 </div>
@@ -67,12 +72,15 @@
 <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-background-light dark:bg-background-dark border-b border-gray-200 dark:border-white/5 p-4 shadow-lg">
     <nav class="flex flex-col gap-4">
          
-        <a class="text-base font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="/tags/">タグ</a>
+        <a class="text-base font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="/tags/">tags</a>
         
-        <a class="text-base font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="/archives/">アーカイブ</a>
+        <a class="text-base font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="/archives/">archives</a>
         
-        <a class="text-base font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="/about/">プロフィール</a>
+        <a class="text-base font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="/about/">about</a>
         
+        <button type="button" aria-label="検索" class="js-search-toggle group flex items-center gap-2 text-base font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
+            <span class="material-symbols-outlined text-[16px] group-hover:text-primary">search</span>
+        </button>
     </nav>
 </div>
 </header>
@@ -84,7 +92,7 @@
     
     
     <div class="w-full mb-10 md:mb-14">
-        <div class="w-full aspect-[21/9] bg-center bg-no-repeat bg-cover rounded-xl shadow-sm overflow-hidden relative" style='background-image: url("/posts/ikebukuro-hamburger/featured_hu_4e294e1216894c06.webp");'>
+        <div class="w-full aspect-[21/9] bg-center bg-no-repeat bg-cover rounded-xl shadow-sm overflow-hidden relative" style='background-image: url("/posts/ikebukuro-hamburger/featured_hu_7d5f86f17552ca1b.webp");'>
             <div class="absolute inset-0 bg-black/10 dark:bg-black/20"></div>
         </div>
     </div>
@@ -132,6 +140,8 @@
 </article>
 
 
+
+
 <nav class="max-w-[720px] mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
     
     <a class="group flex flex-col items-start text-left p-6 rounded-xl border border-transparent hover:border-gray-200 hover:bg-gray-50 dark:hover:border-white/10 dark:hover:bg-white/5 transition-all duration-300" href="/posts/desk-minimalism/">
@@ -146,7 +156,7 @@
     
     
     
-    <a class="group flex flex-col items-end text-right p-6 rounded-xl border border-transparent hover:border-gray-200 hover:bg-gray-50 dark:hover:border-white/10 dark:hover:bg-white/5 transition-all duration-300" href="/posts/midnight-coding/">
+    <a class="group flex flex-col items-end text-right p-6 rounded-xl border border-transparent hover:border-gray-200 hover:bg-gray-50 dark:hover:border-white/10 dark:hover:bg-white/5 transition-all duration-300 " href="/posts/midnight-coding/">
         <span class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2 group-hover:text-primary dark:group-hover:text-white transition-colors flex items-center gap-1">
             Next Post
             <span class="material-symbols-outlined text-sm">arrow_forward</span>

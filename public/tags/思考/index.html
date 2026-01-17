@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>思考 | 日々</title>
@@ -9,7 +9,8 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&amp;family=Noto+Serif+JP:wght@400;500;700;900&amp;family=Noto+Serif:wght@400;500;700;900&amp;family=Noto+Sans:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<meta property="og:url" content="https://example.org/tags/%E6%80%9D%E8%80%83/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:url" content="http://localhost:1313/tags/%E6%80%9D%E8%80%83/">
   <meta property="og:site_name" content="日々">
   <meta property="og:title" content="思考">
   <meta property="og:locale" content="ja">
@@ -20,7 +21,7 @@
   <meta name="twitter:title" content="思考">
 
 
-<link rel="stylesheet" href="https://example.org/css/main.min.css">
+<link rel="stylesheet" href="http://localhost:1313/css/main.min.css">
 
 </head>
 <body class="bg-background-light dark:bg-background-dark text-[#2c2c2c] dark:text-[#e0e0e0] font-sans transition-colors duration-300 min-h-screen flex flex-col">
@@ -28,25 +29,29 @@
 <div class="max-w-3xl mx-auto px-4 md:px-6 h-16 md:h-24 flex items-center justify-between">
 <a class="group flex items-center gap-3" href="/">
 <span class="material-symbols-outlined text-primary text-2xl md:text-3xl opacity-80 group-hover:opacity-100 transition-opacity">spa</span>
-<h1 class="font-display text-xl md:text-2xl font-bold tracking-widest text-gray-800 dark:text-white group-hover:text-primary transition-colors">日々 <span class="text-sm md:text-base font-normal opacity-60 ml-1">Hibi</span></h1>
+<h1 class="font-display text-xl md:text-2xl font-bold tracking-widest text-gray-800 dark:text-white group-hover:text-primary transition-colors">
+    日々
+    
+    <span class="text-sm md:text-base font-normal opacity-60 ml-1">Hibi</span>
+    
+</h1>
 </a>
 <div class="hidden md:flex items-center gap-6">
 <nav class="flex items-center gap-6 mr-2">
     
-    <a class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors tracking-wide" href="/tags/">タグ</a>
+    <a class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors tracking-wide" href="/tags/">tags</a>
     
-    <a class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors tracking-wide" href="/archives/">アーカイブ</a>
+    <a class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors tracking-wide" href="/archives/">archives</a>
     
-    <a class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors tracking-wide" href="/about/">プロフィール</a>
+    <a class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors tracking-wide" href="/about/">about</a>
     
 </nav>
 <div class="flex items-center gap-3 pl-6 border-l border-gray-200 dark:border-white/10">
-<button id="theme-toggle" aria-label="Toggle Theme" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/5 text-gray-600 dark:text-gray-400 transition-colors">
-<span class="material-symbols-outlined text-[20px]">contrast</span>
+<button id="theme-toggle" aria-label="Toggle Theme" class="rounded-full hover:bg-gray-100 dark:hover:bg-white/5 text-gray-600 dark:text-gray-400 transition-colors flex items-center justify-center" style="width:20px;height:20px;">
+<span class="material-symbols-outlined" style="font-family:'Material Symbols Outlined';font-size:16px;line-height:1;display:block;">contrast</span>
 </button>
-<button id="search-toggle" aria-label="検索" class="group flex items-center gap-1 pl-2 pr-3 py-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/5 text-gray-600 dark:text-gray-400 transition-all">
-<span class="material-symbols-outlined text-[20px] group-hover:text-primary">search</span>
-<span class="text-xs font-medium pt-0.5 group-hover:text-primary">検索</span>
+<button id="search-toggle" aria-label="検索" class="js-search-toggle group flex items-center gap-1 px-2 py-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-white/5 text-gray-600 dark:text-gray-400 transition-all">
+<span class="material-symbols-outlined text-[16px] group-hover:text-primary">search</span>
 </button>
 </div>
 </div>
@@ -58,24 +63,74 @@
 <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-background-light dark:bg-background-dark border-b border-gray-200 dark:border-white/5 p-4 shadow-lg">
     <nav class="flex flex-col gap-4">
          
-        <a class="text-base font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="/tags/">タグ</a>
+        <a class="text-base font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="/tags/">tags</a>
         
-        <a class="text-base font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="/archives/">アーカイブ</a>
+        <a class="text-base font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="/archives/">archives</a>
         
-        <a class="text-base font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="/about/">プロフィール</a>
+        <a class="text-base font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="/about/">about</a>
         
+        <button type="button" aria-label="検索" class="js-search-toggle group flex items-center gap-2 text-base font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
+            <span class="material-symbols-outlined text-[16px] group-hover:text-primary">search</span>
+        </button>
     </nav>
 </div>
 </header>
 
     <main class="flex-grow flex flex-col items-center pt-10 md:pt-16 pb-20 md:pb-24 px-4 md:px-6 w-full max-w-3xl mx-auto">
         
-<div class="max-w-3xl mx-auto">
-    <h1 class="font-display text-3xl font-bold mb-8 text-gray-800 dark:text-white">Tags</h1>
-    <div class="flex flex-wrap gap-4">
+<section class="w-full mb-12 text-center">
+    <h1 class="font-display text-3xl font-bold text-gray-800 dark:text-white mb-2">
+        #思考
+    </h1>
+    <p class="text-gray-500 dark:text-gray-400">2 posts</p>
+</section>
+
+
+<div class="flex flex-col gap-6 md:gap-8 w-full max-w-3xl mx-auto">
+    
+    <a class="group flex flex-col sm:flex-row items-start gap-4 sm:gap-6 py-5 border-b border-[#f1f3f3] dark:border-gray-800/50 hover:border-primary/20 transition-all hover:bg-white/40 dark:hover:bg-white/5 -mx-4 px-4 rounded-xl" href="/posts/sound-of-wind/">
+        <span class="font-sans text-xs font-bold text-gray-400 dark:text-gray-500 sm:w-12 shrink-0 pt-2 group-hover:text-primary transition-colors">11.15</span>
+
         
-    </div>
+        
+            
+        
+
+        
+        <div class="w-full sm:w-32 h-40 sm:h-20 shrink-0 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800">
+            <img alt="" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="/posts/sound-of-wind/featured_hu_7e7a376d09278634.webp"/>
+        </div>
+        
+
+        <div class="flex flex-col gap-1.5 flex-1 min-w-0">
+            <span class="font-display text-lg font-bold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors leading-snug">風の音を聴く</span>
+            <span class="text-sm text-gray-500 dark:text-gray-400 font-sans opacity-80 group-hover:opacity-100 transition-opacity line-clamp-2">河川敷に座って、ただ風の音を聴いていた。ススキがざわざわと揺れ、雲が流れていく。</span>
+        </div>
+    </a>
+    
+    <a class="group flex flex-col sm:flex-row items-start gap-4 sm:gap-6 py-5 border-b border-[#f1f3f3] dark:border-gray-800/50 hover:border-primary/20 transition-all hover:bg-white/40 dark:hover:bg-white/5 -mx-4 px-4 rounded-xl" href="/posts/handwritten-notes/">
+        <span class="font-sans text-xs font-bold text-gray-400 dark:text-gray-500 sm:w-12 shrink-0 pt-2 group-hover:text-primary transition-colors">09.10</span>
+
+        
+        
+            
+        
+
+        
+        <div class="w-full sm:w-32 h-40 sm:h-20 shrink-0 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800">
+            <img alt="" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="/posts/handwritten-notes/featured_hu_8683c3e16cc6d449.webp"/>
+        </div>
+        
+
+        <div class="flex flex-col gap-1.5 flex-1 min-w-0">
+            <span class="font-display text-lg font-bold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors leading-snug">手書きのノートについて</span>
+            <span class="text-sm text-gray-500 dark:text-gray-400 font-sans opacity-80 group-hover:opacity-100 transition-opacity line-clamp-2">デジタル全盛の時代だからこそ、手書きの良さを見直している。インクの滲み、紙の感触。</span>
+        </div>
+    </a>
+    
 </div>
+
+
 
     </main>
     <footer class="w-full bg-white dark:bg-[#111315] border-t border-gray-100 dark:border-white/5 py-10 md:py-12">
@@ -118,10 +173,10 @@
 </div>
 
     
-    <script src="https://example.org/js/theme.min.js"></script>
+    <script src="http://localhost:1313/js/theme.min.js"></script>
     
-    <script src="https://example.org/js/search.min.js"></script>
+    <script src="http://localhost:1313/js/search.min.js"></script>
     
-    <script src="https://example.org/js/menu.min.js"></script>
+    <script src="http://localhost:1313/js/menu.min.js"></script>
 </body>
 </html>
