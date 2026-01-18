@@ -13,7 +13,7 @@ showKeepInTouch:
 stats:
   - value: "Tokyo"
     label: "Based"
-  - value: "Rugby"
+  - value: "Running"
     label: "Sports"
   - value: "Jazz"
     label: "Music"
