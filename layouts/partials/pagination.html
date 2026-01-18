@@ -3,24 +3,33 @@
 <div class="w-full mt-16 md:mt-24 pt-10 md:pt-12 border-t border-gray-200 dark:border-white/10 flex justify-center items-center">
     <nav aria-label="Pagination" class="flex items-center gap-2 md:gap-3">
         {{- if $p.HasPrev -}}
-        <a class="mr-2 md:mr-4 group flex items-center gap-1 h-12 md:h-10 px-3 text-base md:text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors font-sans" href="{{ $p.Prev.URL }}">
-            <span class="material-symbols-outlined text-[20px] md:text-[18px] group-hover:-translate-x-0.5 transition-transform">chevron_left</span>
-            <span>前へ</span>
+        <a class="mr-2 md:mr-4 group flex items-center justify-center w-12 h-12 md:w-10 md:h-10 text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="{{ $p.Prev.URL }}" aria-label="Previous Page">
+            <span class="material-symbols-outlined text-[24px] md:text-[20px] group-hover:-translate-x-0.5 transition-transform">chevron_left</span>
         </a>
         {{- end -}}
 
+        {{- $adj := 2 -}}
+        {{- $lower := sub $p.PageNumber $adj -}}
+        {{- $upper := add $p.PageNumber $adj -}}
+        {{- $min := 1 -}}
+        {{- $max := $p.TotalPages -}}
+
         {{- range $p.Pagers -}}
-            {{- if eq .PageNumber $p.PageNumber -}}
-            <span class="flex items-center justify-center w-12 h-12 md:w-10 md:h-10 rounded-full bg-gray-200 text-gray-900 dark:bg-white/10 dark:text-white text-base md:text-sm font-bold font-sans cursor-default shadow-sm">{{ .PageNumber }}</span>
-            {{- else -}}
-            <a class="flex items-center justify-center w-12 h-12 md:w-10 md:h-10 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-white/5 hover:text-primary dark:hover:text-primary transition-colors text-base md:text-sm font-medium font-sans" href="{{ .URL }}">{{ .PageNumber }}</a>
+            {{- $num := .PageNumber -}}
+            {{- if or (eq $num $min) (eq $num $max) (and (ge $num $lower) (le $num $upper)) -}}
+                {{- if eq $num $p.PageNumber -}}
+                <span class="flex items-center justify-center w-12 h-12 md:w-10 md:h-10 rounded-full bg-gray-200 text-gray-900 dark:bg-white/10 dark:text-white text-base md:text-sm font-bold font-sans cursor-default shadow-sm">{{ $num }}</span>
+                {{- else -}}
+                <a class="flex items-center justify-center w-12 h-12 md:w-10 md:h-10 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-white/5 hover:text-primary dark:hover:text-primary transition-colors text-base md:text-sm font-medium font-sans" href="{{ .URL }}">{{ $num }}</a>
+                {{- end -}}
+            {{- else if or (eq $num (sub $lower 1)) (eq $num (add $upper 1)) -}}
+                <span class="flex items-center justify-center w-8 h-12 md:h-10 text-gray-400 font-sans">...</span>
             {{- end -}}
         {{- end -}}
 
         {{- if $p.HasNext -}}
-        <a class="ml-2 md:ml-4 group flex items-center gap-1 h-12 md:h-10 px-3 text-base md:text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors font-sans" href="{{ $p.Next.URL }}">
-            <span>次へ</span>
-            <span class="material-symbols-outlined text-[20px] md:text-[18px] group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+        <a class="ml-2 md:ml-4 group flex items-center justify-center w-12 h-12 md:w-10 md:h-10 text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="{{ $p.Next.URL }}" aria-label="Next Page">
+            <span class="material-symbols-outlined text-[24px] md:text-[20px] group-hover:translate-x-0.5 transition-transform">chevron_right</span>
         </a>
         {{- end -}}
     </nav>

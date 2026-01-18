@@ -3,7 +3,7 @@ languageCode: 'ja'
 title: '日々'
 theme: []
 pagination:
-  pagerSize: 3
+  pagerSize: 10
 menu:
   main:
     - identifier: tags
@@ -34,3 +34,5 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+permalinks:
+  posts: /posts/:slug/

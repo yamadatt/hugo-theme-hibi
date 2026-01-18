@@ -6,11 +6,10 @@
     <p class="text-gray-500 dark:text-gray-400">{{ len .Pages }} posts</p>
 </section>
 
-{{ $paginator := .Paginate .Pages }}
 <div class="flex flex-col gap-6 md:gap-8 w-full max-w-3xl mx-auto">
-    {{ range $paginator.Pages }}
+    {{ range .Pages }}
     <a class="group flex flex-col sm:flex-row items-start gap-4 sm:gap-6 py-5 border-b border-[#f1f3f3] dark:border-gray-800/50 hover:border-primary/20 transition-all hover:bg-white/40 dark:hover:bg-white/5 -mx-4 px-4 rounded-xl" href="{{ .RelPermalink }}">
-        <span class="font-sans text-xs font-bold text-gray-400 dark:text-gray-500 sm:w-12 shrink-0 pt-2 group-hover:text-primary transition-colors">{{ .Date.Format "01.02" }}</span>
+        <span class="font-sans text-xs font-bold text-gray-400 dark:text-gray-500 sm:w-20 shrink-0 pt-2 group-hover:text-primary transition-colors">{{ .Date.Format "2006.01.02" }}</span>
 
         {{ $image := "" }}
         {{ with .Resources.GetMatch .Params.featuredImagePreview }}
@@ -35,5 +34,4 @@
     {{ end }}
 </div>
 
-{{ partial "pagination.html" (dict "Paginator" $paginator) }}
 {{ end }}
