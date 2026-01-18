@@ -7,10 +7,9 @@
 </section>
 
 <div class="flex flex-col gap-16 md:gap-20 w-full max-w-3xl mx-auto">
-    {{ range .Paginator.Pages }}
+    {{ range .Pages }}
     {{ partial "post-card.html" (dict "Page" . "Site" .Site "ImageSize" "640x webp q80" "ImageClass" "w-full h-[240px] md:h-[320px] object-cover transform group-hover:scale-[1.01] transition-transform duration-700 ease-out" "SummaryTruncate" 150) }}
     {{ end }}
 </div>
 
-{{ partial "pagination.html" (dict "Paginator" .Paginator) }}
 {{ end }}
