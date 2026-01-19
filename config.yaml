@@ -1,4 +1,4 @@
-baseURL: 'https://example.org/'
+baseURL: 'https://hugo-theme-hibi.netlify.app/'
 languageCode: 'ja'
 title: '日々'
 theme: []
