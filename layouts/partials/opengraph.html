@@ -38,9 +38,13 @@
   {{ end }}
 {{ end }}
 
-{{/* 4. フォールバック (static/images/ogp.png を想定) */}}
+{{/* 4. フォールバック (static/images/ogp.png または .svg を想定) */}}
 {{ if eq $ogImage "" }}
-  {{ $ogImage = "/images/ogp.png" | absURL }}
+  {{ if (fileExists "static/images/ogp.png") }}
+    {{ $ogImage = "/images/ogp.png" | absURL }}
+  {{ else if (fileExists "static/images/ogp.svg") }}
+    {{ $ogImage = "/images/ogp.svg" | absURL }}
+  {{ end }}
 {{ end }}
 
 <meta property="og:image" content="{{ $ogImage }}">
