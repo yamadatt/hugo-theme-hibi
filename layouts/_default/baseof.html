@@ -3,7 +3,7 @@
 <head>
     {{ partial "head.html" . }}
 </head>
-<body class="bg-background-light dark:bg-background-dark text-[#2c2c2c] dark:text-[#e0e0e0] font-sans transition-colors duration-300 min-h-screen flex flex-col">
+<body class="bg-background-light dark:bg-background-dark text-[#2c2c2c] dark:text-[#e0e0e0] font-sans transition-colors duration-300 min-h-screen flex flex-col" data-baseurl="{{ "/" | relURL }}">
     {{ partial "header.html" . }}
     <main class="flex-grow flex flex-col items-center pt-10 md:pt-16 pb-20 md:pb-24 px-4 md:px-6 w-full max-w-3xl mx-auto">
         {{ block "main" . }}{{ end }}

@@ -43,10 +43,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    function getBaseUrl() {
+        const raw = document.body && document.body.dataset ? document.body.dataset.baseurl : '';
+        if (!raw) return '/';
+        return raw.endsWith('/') ? raw : `${raw}/`;
+    }
+
     async function loadSearchIndex() {
         if (searchIndex) return;
         try {
-            const response = await fetch('/index.json');
+            const response = await fetch(`${getBaseUrl()}index.json`);
             const data = await response.json();
             searchIndex = data.posts;
         } catch (e) {
