@@ -1,0 +1,56 @@
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+
+{{ $description := "" }}
+{{ if .Description }}
+  {{ $description = .Description }}
+{{ else if .IsPage }}
+  {{ $description = .Summary }}
+{{ else }}
+  {{ $description = .Site.Params.description }}
+{{ end }}
+<meta property="og:description" content="{{ $description }}">
+
+{{/* 画像設定ロジック */}}
+{{ $ogImage := "" }}
+
+{{/* 1. Front Matter の images 配列を確認 */}}
+{{ if .Params.images }}
+  {{ $ogImage = index .Params.images 0 | absURL }}
+{{ end }}
+
+{{/* 2. ページリソース (featured.jpgなど) を確認 */}}
+{{ if eq $ogImage "" }}
+  {{ with .Resources.GetMatch "featured.*" }}
+    {{/* OGP推奨サイズにリサイズ (1200x630) */}}
+    {{ $img := .Resize "1200x630 center" }}
+    {{ $ogImage = $img.Permalink }}
+  {{ end }}
+{{ end }}
+
+{{/* 3. サイト設定のデフォルト画像を確認 (params.images) */}}
+{{ if eq $ogImage "" }}
+  {{ if .Site.Params.images }}
+    {{ $ogImage = index .Site.Params.images 0 | absURL }}
+  {{ end }}
+{{ end }}
+
+{{/* 4. フォールバック (static/images/ogp.png または .svg を想定) */}}
+{{ if eq $ogImage "" }}
+  {{ if (fileExists "static/images/ogp.png") }}
+    {{ $ogImage = "/images/ogp.png" | absURL }}
+  {{ else if (fileExists "static/images/ogp.svg") }}
+    {{ $ogImage = "/images/ogp.svg" | absURL }}
+  {{ end }}
+{{ end }}
+
+<meta property="og:image" content="{{ $ogImage }}">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ $description }}">
+<meta name="twitter:image" content="{{ $ogImage }}">
