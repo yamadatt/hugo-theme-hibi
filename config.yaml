@@ -1,7 +1,7 @@
 baseURL: 'https://hugo-theme-hibi.netlify.app/'
 languageCode: 'ja'
 hasCJKLanguage: true
-summaryLength: 140
+summaryLength: 100
 title: '日々'
 theme: []
 pagination:
