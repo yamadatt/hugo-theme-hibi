@@ -1,5 +1,7 @@
 baseURL: 'https://hugo-theme-hibi.netlify.app/'
 languageCode: 'ja'
+hasCJKLanguage: true
+summaryLength: 100
 title: '日々'
 theme: []
 pagination:
@@ -19,6 +21,8 @@ menu:
       url: /about/
       weight: 30
 params:
+  # Summary truncation length (0 = no truncation)
+  summaryTruncateLength: 0
   #タグ未設定の記事に付与するタグ
   tagFallbackLabel: 日常
   headerSubtitle: Hibi
