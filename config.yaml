@@ -3,26 +3,23 @@ languageCode: 'ja'
 hasCJKLanguage: true
 summaryLength: 100
 title: '日々'
-theme: []
 pagination:
   pagerSize: 10
 menu:
   main:
     - identifier: tags
-      name: tags
+      name: Tags
       url: /tags/
       weight: 10
-    - identifier: archives
+    - identifier: Archives
       name: archives
       url: /archives/
       weight: 20
-    - identifier: about
+    - identifier: About
       name: about
       url: /about/
       weight: 30
 params:
-  # Summary truncation length (0 = no truncation)
-  summaryTruncateLength: 0
   #タグ未設定の記事に付与するタグ
   tagFallbackLabel: 日常
   headerSubtitle: Hibi
