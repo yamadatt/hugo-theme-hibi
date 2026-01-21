@@ -1,0 +1,12 @@
+name = "hugo-theme-hibi"
+license = "MIT"
+licenselink = ""
+description = "静かな雰囲気のシンプルなHugoテーマ。"
+homepage = ""
+tags = ["blog", "minimal", "responsive", "dark-mode", "tailwind"]
+features = ["responsive", "dark-mode", "tailwindcss", "postcss"]
+min_version = "0.120.0"
+
+[author]
+  name = ""
+  homepage = ""
