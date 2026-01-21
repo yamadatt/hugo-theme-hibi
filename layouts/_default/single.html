@@ -2,7 +2,8 @@
 <article class="max-w-[720px] mx-auto w-full flex flex-col">
     <!-- Hero Image -->
     {{ with .Resources.GetMatch .Params.featuredImage }}
-    {{ $image := .Resize "1280x webp q85" }}
+    {{ $imageSize := site.Params.images.single | default "1280x webp q85" }}
+    {{ $image := .Resize $imageSize }}
     <div class="w-full mb-10 md:mb-14">
         <div class="w-full aspect-[21/9] bg-center bg-no-repeat bg-cover rounded-xl shadow-sm overflow-hidden relative" style='background-image: url("{{ $image.RelPermalink }}");'>
             <div class="absolute inset-0 bg-black/10 dark:bg-black/20"></div>

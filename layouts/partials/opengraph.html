@@ -25,8 +25,9 @@
 {{/* 2. ページリソース (featured.jpgなど) を確認 */}}
 {{ if eq $ogImage "" }}
   {{ with .Resources.GetMatch "featured.*" }}
-    {{/* OGP推奨サイズにリサイズ (1200x630) */}}
-    {{ $img := .Resize "1200x630 center" }}
+    {{/* OGP推奨サイズにリサイズ */}}
+    {{ $ogpSize := site.Params.images.ogp | default "1200x630 center" }}
+    {{ $img := .Resize $ogpSize }}
     {{ $ogImage = $img.Permalink }}
   {{ end }}
 {{ end }}
