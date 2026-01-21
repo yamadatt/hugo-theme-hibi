@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const searchToggleButtons = document.querySelectorAll('.js-search-toggle');
-    const legacySearchToggle = document.getElementById('search-toggle');
-    const searchToggles = searchToggleButtons.length ? Array.from(searchToggleButtons) : (legacySearchToggle ? [legacySearchToggle] : []);
+    const searchToggles = Array.from(searchToggleButtons);
     const searchClose = document.getElementById('search-close');
     const searchModal = document.getElementById('search-modal');
     const searchInput = document.getElementById('search-input');
