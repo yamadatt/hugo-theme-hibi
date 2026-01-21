@@ -14,7 +14,7 @@
 <div class="flex flex-col gap-16 md:gap-20 w-full max-w-3xl mx-auto">
     {{ $paginator := .Paginate (where .Site.RegularPages "Section" "posts") }}
     {{ range $paginator.Pages }}
-    {{ partial "post-card.html" (dict "Page" . "Site" .Site "ImageSize" "800x webp q80" "ImageClass" "w-full h-[240px] md:h-[320px] object-cover transform group-hover:scale-[1.01] transition-transform duration-700 ease-out") }}
+    {{ partial "post-card.html" (dict "Page" . "Site" .Site "ImageSize" (.Site.Params.images.home | default "800x webp q80") "ImageClass" "w-full h-[240px] md:h-[320px] object-cover transform group-hover:scale-[1.01] transition-transform duration-700 ease-out") }}
     {{ end }}
 </div>
 

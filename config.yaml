@@ -23,6 +23,13 @@ params:
   #タグ未設定の記事に付与するタグ
   tagFallbackLabel: 日常
   headerSubtitle: Hibi
+  # 画像サイズ設定 (一元管理)
+  images:
+    card: "640x webp q80"           # 記事一覧カード (list.html)
+    cardCompact: "300x webp q80"    # コンパクトカード (archive, term)
+    home: "800x webp q80"           # トップページ
+    single: "1280x webp q85"        # 記事詳細ページ
+    ogp: "1200x630 center"          # OGP画像
 imaging:
   quality: 80
   resampleFilter: lanczos

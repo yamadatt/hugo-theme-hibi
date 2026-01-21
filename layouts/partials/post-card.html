@@ -1,5 +1,5 @@
 {{- $page := .Page -}}
-{{- $imageSize := .ImageSize | default "640x webp q80" -}}
+{{- $imageSize := .ImageSize | default (.Site.Params.images.card | default "640x webp q80") -}}
 {{- $imageClass := .ImageClass | default "w-full h-[240px] md:h-[320px] object-cover transform group-hover:scale-[1.01] transition-transform duration-700 ease-out" -}}
 {{- $summaryTruncate := .SummaryTruncate | default 0 -}}
 {{- $tagFallback := .TagFallback | default (.Site.Params.tagFallbackLabel | default "Uncategorized") -}}
