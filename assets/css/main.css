@@ -13,6 +13,11 @@
   --color-background-dark: #1a1c1e;
   --color-surface-light: #ffffff;
   --color-surface-dark: #23262a;
+  --color-text-primary: #2c2c2c;
+  --color-text-primary-dark: #e0e0e0;
+  --color-primary-muted: rgba(62, 92, 92, 0.03);
+  --color-primary-muted-dark: rgba(62, 92, 92, 0.1);
+  --color-primary-border: rgba(62, 92, 92, 0.15);
 
   --radius-lg: 0.5rem;
   --radius-xl: 0.75rem;
@@ -22,12 +27,12 @@
   html, body {
     font-family: var(--font-sans);
     background-color: var(--color-background-light);
-    color: #2c2c2c;
+    color: var(--color-text-primary);
   }
   
   .dark html, .dark body {
     background-color: var(--color-background-dark);
-    color: #e0e0e0;
+    color: var(--color-text-primary-dark);
   }
 
   body {
@@ -85,7 +90,7 @@
     margin-top: 3rem;
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid rgba(62, 92, 92, 0.15); /* primary color with low opacity */
+    border-bottom: 1px solid var(--color-primary-border);
     position: relative;
   }
 
@@ -111,13 +116,13 @@
     margin: 2rem 0;
     padding: 1rem 1.5rem;
     border-left: 3px solid var(--color-primary);
-    background-color: rgba(62, 92, 92, 0.03);
+    background-color: var(--color-primary-muted);
     font-style: italic;
     color: #555;
   }
 
   .dark blockquote {
-    background-color: rgba(62, 92, 92, 0.1);
+    background-color: var(--color-primary-muted-dark);
     color: #bbb;
   }
 
@@ -159,10 +164,10 @@
   }
 
   ol li {
-    color: #2c2c2c;
+    color: var(--color-text-primary);
   }
 
   .dark ol li {
-    color: #e0e0e0;
+    color: var(--color-text-primary-dark);
   }
 }
