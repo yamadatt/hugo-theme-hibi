@@ -31,6 +31,10 @@ module:
 npm install
 ```
 
+npm init -y
+
+npm i -D postcss postcss-cli autoprefixer
+
 ### 4) 開発サーバー起動
 
 ```bash
