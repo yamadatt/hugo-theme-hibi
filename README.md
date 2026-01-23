@@ -1,8 +1,8 @@
 # hugo-theme-hibi
 
-シンプルで静かな雰囲気のHugoテーマです。Tailwind CSS（PostCSS経由）でスタイルを生成しています。
+シンプルで静かな雰囲気のHugoテーマです。
 
-![screenshot](screenshot.png)
+![screenshot](images/screenshot.png)
 
 ## セットアップ
 
@@ -30,10 +30,6 @@ module:
 ```bash
 npm install
 ```
-
-npm init -y
-
-npm i -D postcss postcss-cli autoprefixer
 
 ### 4) 開発サーバー起動
 

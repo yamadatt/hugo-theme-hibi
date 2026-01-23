@@ -31,7 +31,7 @@
     <div class="flex flex-col gap-1.5 flex-1 min-w-0">
         <span class="{{ $titleClass }}">{{ $pageTitle }}</span>
         <span class="{{ $summaryClass }}">
-            {{- $summaryTruncate := .SummaryTruncate | default 0 -}}
+            {{- $summaryTruncate := .SummaryTruncate | default (.Site.Params.summaryLength | default 100) -}}
             {{- if gt $summaryTruncate 0 -}}
                 {{- $page.Summary | truncate $summaryTruncate -}}
             {{- else -}}
