@@ -4,3 +4,6 @@ node_modules/
 __pycache__/
 .hugo_build.lock
 .DS_Store
+exampleSite/public/
+exampleSite/resources/_gen/
+exampleSite/.hugo_build.lock

@@ -1,8 +1,8 @@
 # hugo-theme-hibi
 
-シンプルで静かな雰囲気のHugoテーマです。Tailwind CSS（PostCSS経由）でスタイルを生成しています。
+シンプルで静かな雰囲気のHugoテーマです。
 
-![screenshot](screenshot.png)
+![screenshot](images/screenshot.png)
 
 ## セットアップ
 
