@@ -46,6 +46,9 @@
 
     <!-- Article Body -->
     <div class="prose prose-lg dark:prose-invert max-w-none leading-loose">
+        {{ if .Params.toc | default site.Params.toc }}
+        {{ partial "toc.html" . }}
+        {{ end }}
         {{ .Content }}
     </div>
 

@@ -5,3 +5,5 @@ nextPost:
 readingTime:
   one: "{{ .Count }} minute read"
   other: "{{ .Count }} minutes read"
+tableOfContents:
+  other: "Table of Contents"

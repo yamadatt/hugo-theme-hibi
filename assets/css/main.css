@@ -72,10 +72,10 @@
     vertical-align: middle;
   }
 
-  /* Ensure theme toggle size is applied even if utility CSS isn't regenerated. */
+  /* Theme toggle tap target: sized here only (no inline style on the button). */
   #theme-toggle {
-    width: 12px;
-    height: 12px;
+    width: 40px;
+    height: 40px;
     padding: 0;
     display: inline-flex;
     align-items: center;
@@ -84,7 +84,7 @@
 
   #theme-toggle .material-symbols-outlined {
     font-family: "Material Symbols Outlined";
-    font-size: 8px;
+    font-size: 16px;
     line-height: 1;
     display: block;
   }
@@ -192,6 +192,32 @@
 
   .dark .prose :where(code):not(pre code) {
     background-color: var(--color-primary-muted-dark);
+  }
+
+  .toc-body ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    list-style: disc;
+  }
+
+  .toc-body li {
+    margin-bottom: 0.4rem;
+    line-height: 1.6;
+    color: var(--color-text-primary);
+  }
+
+  .dark .toc-body li {
+    color: var(--color-text-primary-dark);
+  }
+
+  .toc-body a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .toc-body a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
   }
 
   ul, ol {

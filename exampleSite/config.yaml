@@ -48,3 +48,10 @@ markup:
     lineNos: false
 permalinks:
   posts: /posts/:slug/
+security:
+  node:
+    permissions:
+      allowaddons: ['tailwindcss', 'postcss']
+      allowchildprocess: ['tailwindcss', 'postcss']
+      allowworker: ['tailwindcss', 'postcss']
+      allowread: ['.', '..']
