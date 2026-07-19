@@ -42,5 +42,16 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+  highlight:
+    noClasses: false
+    style: 'github'
+    lineNos: false
 permalinks:
   posts: /posts/:slug/
+security:
+  node:
+    permissions:
+      allowaddons: ['tailwindcss', 'postcss']
+      allowchildprocess: ['tailwindcss', 'postcss']
+      allowworker: ['tailwindcss', 'postcss']
+      allowread: ['.', '..']

@@ -1,0 +1,8 @@
+prevPost:
+  other: "前の記事"
+nextPost:
+  other: "次の記事"
+readingTime:
+  other: "{{ .Count }} 分で読めます"
+tableOfContents:
+  other: "目次"

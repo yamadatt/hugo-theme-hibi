@@ -11,7 +11,7 @@
 {{- $pageTitle := $page.Title -}}
 
 <a class="{{ $wrapperClass }}" href="{{ $pageLink }}">
-    <span class="font-sans text-xs font-bold text-gray-400 dark:text-gray-500 {{ $dateWidthClass }} shrink-0 pt-2 group-hover:text-primary transition-colors">{{ $page.Date.Format $dateFormat }}</span>
+    <span class="font-sans text-xs font-bold text-gray-500 dark:text-gray-400 {{ $dateWidthClass }} shrink-0 pt-2 group-hover:text-primary transition-colors">{{ $page.Date.Format $dateFormat }}</span>
 
     {{- $image := "" -}}
     {{- with $page.Resources.GetMatch $page.Params.featuredImagePreview -}}
@@ -24,7 +24,7 @@
 
     {{- with $image -}}
     <div class="w-full sm:w-32 h-40 sm:h-20 shrink-0 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800">
-        <img alt="{{ $pageTitle }}" class="{{ $imageClass }}" src="{{ .RelPermalink }}"/>
+        <img alt="{{ $pageTitle }}" class="{{ $imageClass }}" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" loading="lazy" decoding="async"/>
     </div>
     {{- end -}}
 

@@ -39,6 +39,16 @@
     font-feature-settings: "palt";
     -webkit-font-smoothing: antialiased;
     letter-spacing: 0.02em;
+    line-break: strict;
+    overflow-wrap: break-word;
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
   }
 
   /* Force solid background for header to prevent transparency */
@@ -62,10 +72,10 @@
     vertical-align: middle;
   }
 
-  /* Ensure theme toggle size is applied even if utility CSS isn't regenerated. */
+  /* Theme toggle tap target: sized here only (no inline style on the button). */
   #theme-toggle {
-    width: 12px;
-    height: 12px;
+    width: 40px;
+    height: 40px;
     padding: 0;
     display: inline-flex;
     align-items: center;
@@ -74,7 +84,7 @@
 
   #theme-toggle .material-symbols-outlined {
     font-family: "Material Symbols Outlined";
-    font-size: 8px;
+    font-size: 16px;
     line-height: 1;
     display: block;
   }
@@ -83,8 +93,8 @@
     line-height: 1.8;
   }
 
-  /* Markdown Typography */
-  h2 {
+  /* Markdown Typography (scoped to article body prose only) */
+  .prose h2 {
     font-size: 1.5rem;
     font-weight: 700;
     margin-top: 3rem;
@@ -94,7 +104,7 @@
     position: relative;
   }
 
-  h2::after {
+  .prose h2::after {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -104,7 +114,7 @@
     background-color: var(--color-primary);
   }
 
-  h3 {
+  .prose h3 {
     font-size: 1.25rem;
     font-weight: 600;
     margin-top: 2.5rem;
@@ -112,18 +122,102 @@
     color: var(--color-primary);
   }
 
+  .prose h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
   blockquote {
     margin: 2rem 0;
     padding: 1rem 1.5rem;
     border-left: 3px solid var(--color-primary);
     background-color: var(--color-primary-muted);
-    font-style: italic;
-    color: #555;
+    font-style: normal;
+    color: var(--color-text-primary);
   }
 
   .dark blockquote {
     background-color: var(--color-primary-muted-dark);
-    color: #bbb;
+    color: var(--color-text-primary-dark);
+  }
+
+  .prose :where(a) {
+    overflow-wrap: anywhere;
+    text-decoration-color: color-mix(in srgb, var(--color-primary) 40%, transparent);
+    text-underline-offset: 4px;
+  }
+
+  .prose :where(table) {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .prose :where(figcaption) {
+    font-size: 0.8rem;
+    color: var(--color-text-primary);
+    opacity: 0.6;
+    text-align: center;
+  }
+
+  .dark .prose :where(figcaption) {
+    color: var(--color-text-primary-dark);
+  }
+
+  .prose :where(pre) {
+    overflow-x: auto;
+    font-size: 0.875rem;
+    padding: 1rem 1.25rem;
+    line-height: 1.6;
+    border-radius: var(--radius-lg);
+    background-color: var(--color-primary-muted);
+  }
+
+  .dark .prose :where(pre) {
+    background-color: var(--color-primary-muted-dark);
+  }
+
+  .prose :where(pre code) {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .prose :where(code):not(pre code) {
+    background-color: var(--color-primary-muted);
+    border-radius: 0.25rem;
+    padding: 0.15em 0.4em;
+  }
+
+  .dark .prose :where(code):not(pre code) {
+    background-color: var(--color-primary-muted-dark);
+  }
+
+  .toc-body ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    list-style: disc;
+  }
+
+  .toc-body li {
+    margin-bottom: 0.4rem;
+    line-height: 1.6;
+    color: var(--color-text-primary);
+  }
+
+  .dark .toc-body li {
+    color: var(--color-text-primary-dark);
+  }
+
+  .toc-body a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .toc-body a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
   }
 
   ul, ol {
@@ -170,4 +264,62 @@
   .dark ol li {
     color: var(--color-text-primary-dark);
   }
+}
+
+/* Chroma syntax highlighting (generated via `hugo gen chromastyles --style=github`) */
+@layer base {
+  .bg { background-color:#f7f7f7; }
+  .chroma { background-color:#f7f7f7;-webkit-text-size-adjust:none; }
+  .chroma .err { color:#f6f8fa;background-color:#82071e }
+  .chroma .lnlinks { outline:none;text-decoration:none;color:inherit }
+  .chroma .lntd { vertical-align:top;padding:0;margin:0;border:0; }
+  .chroma .lntable { border-spacing:0;padding:0;margin:0;border:0; }
+  .chroma .hl { background-color:#dedede }
+  .chroma .lnt { white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f }
+  .chroma .ln { white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f }
+  .chroma .line { display:flex; }
+  .chroma .k, .chroma .kc, .chroma .kd, .chroma .kn, .chroma .kp, .chroma .kr, .chroma .kt { color:#cf222e }
+  .chroma .na, .chroma .nc, .chroma .nx, .chroma .p { color:#1f2328 }
+  .chroma .no, .chroma .nd, .chroma .nt, .chroma .m, .chroma .mb, .chroma .mf, .chroma .mh, .chroma .mi, .chroma .il, .chroma .mo, .chroma .o, .chroma .ow, .chroma .or { color:#0550ae }
+  .chroma .ni, .chroma .nb, .chroma .nf, .chroma .fm { color:#6639ba }
+  .chroma .nl { color:#900;font-weight:bold }
+  .chroma .nn { color:#24292e }
+  .chroma .bp { color:#6a737d }
+  .chroma .nv, .chroma .vc, .chroma .vg, .chroma .vi, .chroma .vm { color:#953800 }
+  .chroma .s, .chroma .sa, .chroma .sb, .chroma .sc, .chroma .dl, .chroma .sd, .chroma .s2, .chroma .se, .chroma .sh, .chroma .si, .chroma .sx, .chroma .sr, .chroma .s1 { color:#0a3069 }
+  .chroma .ss { color:#032f62 }
+  .chroma .c, .chroma .ch, .chroma .cm, .chroma .c1, .chroma .cs, .chroma .cp, .chroma .cpf { color:#57606a }
+  .chroma .gd { color:#82071e;background-color:#ffebe9 }
+  .chroma .ge, .chroma .go { color:#1f2328 }
+  .chroma .gi { color:#116329;background-color:#dafbe1 }
+  .chroma .gl { text-decoration:underline }
+  .chroma .w { color:#fff }
+
+  .dark .chroma { color:#e6edf3;background-color:#0d1117; }
+  .dark .chroma .err { color:#f85149 }
+  .dark .chroma .hl { background-color:#6e7681 }
+  .dark .chroma .lnt { color:#737679 }
+  .dark .chroma .ln { color:#6e7681 }
+  .dark .chroma .k, .dark .chroma .kd, .dark .chroma .kn, .dark .chroma .kr, .dark .chroma .kt { color:#ff7b72 }
+  .dark .chroma .kc, .dark .chroma .kp { color:#79c0ff }
+  .dark .chroma .nc, .dark .chroma .ne { color:#f0883e;font-weight:bold }
+  .dark .chroma .no, .dark .chroma .nl, .dark .chroma .ld, .dark .chroma .gh, .dark .chroma .gu, .dark .chroma .py, .dark .chroma .nv, .dark .chroma .vc, .dark .chroma .vg, .dark .chroma .vi, .dark .chroma .vm { color:#79c0ff }
+  .dark .chroma .nd, .dark .chroma .nf, .dark .chroma .fm { color:#d2a8ff;font-weight:bold }
+  .dark .chroma .ni { color:#ffa657 }
+  .dark .chroma .nn, .dark .chroma .gt { color:#ff7b72 }
+  .dark .chroma .nx { color:#e6edf3 }
+  .dark .chroma .nt { color:#7ee787 }
+  .dark .chroma .l, .dark .chroma .s, .dark .chroma .sb, .dark .chroma .sc, .dark .chroma .sd, .dark .chroma .s2, .dark .chroma .si, .dark .chroma .sx, .dark .chroma .s1, .dark .chroma .ss, .dark .chroma .m, .dark .chroma .mb, .dark .chroma .mf, .dark .chroma .mh, .dark .chroma .mi, .dark .chroma .il, .dark .chroma .mo { color:#a5d6ff }
+  .dark .chroma .sa, .dark .chroma .dl, .dark .chroma .se, .dark .chroma .sh { color:#79c0ff }
+  .dark .chroma .o, .dark .chroma .ow, .dark .chroma .or { color:#ff7b72;font-weight:bold }
+  .dark .chroma .c, .dark .chroma .ch, .dark .chroma .cm, .dark .chroma .c1 { color:#8b949e;font-style:italic }
+  .dark .chroma .cs, .dark .chroma .cp, .dark .chroma .cpf { color:#8b949e;font-weight:bold;font-style:italic }
+  .dark .chroma .gd { color:#ffa198;background-color:#490202 }
+  .dark .chroma .ge { font-style:italic }
+  .dark .chroma .gr { color:#ffa198 }
+  .dark .chroma .gi { color:#56d364;background-color:#0f5323 }
+  .dark .chroma .go, .dark .chroma .gp { color:#8b949e }
+  .dark .chroma .gs { font-weight:bold }
+  .dark .chroma .gl { text-decoration:underline }
+  .dark .chroma .w { color:#6e7681 }
 }
