@@ -27,7 +27,7 @@
         <div class="flex items-center gap-3">
             <time class="font-sans text-xs font-bold tracking-widest text-primary/80 uppercase" datetime="{{ $page.Date.Format "2006-01-02" }}">{{ $page.Date.Format "2006.01.02" }}</time>
             <span class="w-8 h-px bg-gray-200 dark:bg-white/10"></span>
-            <span class="text-xs text-gray-400">
+            <span class="text-xs text-gray-500 dark:text-gray-400">
                 {{- with $page.Params.tags -}}
                     {{- index . 0 -}}
                 {{- else -}}
