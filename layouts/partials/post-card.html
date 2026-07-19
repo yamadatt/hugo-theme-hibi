@@ -19,7 +19,7 @@
 
     {{- with $image -}}
     <a class="overflow-hidden rounded-md" href="{{ $pageLink }}">
-        <img alt="{{ $pageTitle }}" class="{{ $imageClass }}" src="{{ .RelPermalink }}"/>
+        <img alt="{{ $pageTitle }}" class="{{ $imageClass }}" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" loading="lazy" decoding="async"/>
     </a>
     {{- end -}}
 

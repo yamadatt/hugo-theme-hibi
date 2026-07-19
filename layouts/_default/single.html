@@ -1,11 +1,13 @@
 {{ define "main" }}
 <article class="max-w-[720px] mx-auto w-full flex flex-col">
     <!-- Hero Image -->
+    {{ $pageTitle := .Title }}
     {{ with .Resources.GetMatch .Params.featuredImage }}
     {{ $imageSize := site.Params.images.single | default "1280x webp q85" }}
     {{ $image := .Resize $imageSize }}
     <div class="w-full mb-10 md:mb-14">
-        <div class="w-full aspect-[21/9] bg-center bg-no-repeat bg-cover rounded-xl shadow-sm overflow-hidden relative" style='background-image: url("{{ $image.RelPermalink }}");'>
+        <div class="w-full aspect-[21/9] rounded-xl shadow-sm overflow-hidden relative">
+            <img src="{{ $image.RelPermalink }}" alt="{{ $pageTitle }}" width="{{ $image.Width }}" height="{{ $image.Height }}" fetchpriority="high" class="object-cover w-full h-full"/>
             <div class="absolute inset-0 bg-black/10 dark:bg-black/20"></div>
         </div>
     </div>
@@ -37,6 +39,8 @@
         <div class="flex items-center justify-center gap-2 text-gray-500 dark:text-gray-400 text-sm tracking-widest uppercase">
             <span class="material-symbols-outlined text-[16px] align-text-bottom">calendar_today</span>
             <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年1月2日" }}</time>
+            <span aria-hidden="true">·</span>
+            <span>{{ i18n "readingTime" .ReadingTime }}</span>
         </div>
     </div>
 
@@ -45,7 +49,7 @@
         {{ .Content }}
     </div>
 
-    <div class="w-full h-px bg-gray-200 dark:border-white/10 mb-12 mt-12"></div>
+    <div class="w-full h-px bg-gray-200 dark:bg-white/10 mb-12 mt-12"></div>
 </article>
 
 <!-- Post Navigation -->
@@ -56,7 +60,7 @@
     <a class="group flex flex-col items-start text-left p-6 rounded-xl border border-transparent hover:border-gray-200 hover:bg-gray-50 dark:hover:border-white/10 dark:hover:bg-white/5 transition-all duration-300" href="{{ .RelPermalink }}">
         <span class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2 group-hover:text-primary dark:group-hover:text-white transition-colors flex items-center gap-1">
             <span class="material-symbols-outlined text-sm">arrow_back</span>
-            Previous Post
+            {{ i18n "prevPost" }}
         </span>
         <h3 class="text-lg font-bold text-primary dark:text-white leading-snug group-hover:underline decoration-primary/30 underline-offset-4">
             {{ .Title }}
@@ -67,7 +71,7 @@
     {{ with .NextInSection }}
     <a class="group flex flex-col items-end text-right p-6 rounded-xl border border-transparent hover:border-gray-200 hover:bg-gray-50 dark:hover:border-white/10 dark:hover:bg-white/5 transition-all duration-300 {{ if and (not $hasPrev) $hasNext }}md:col-start-2{{ end }}" href="{{ .RelPermalink }}">
         <span class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2 group-hover:text-primary dark:group-hover:text-white transition-colors flex items-center gap-1">
-            Next Post
+            {{ i18n "nextPost" }}
             <span class="material-symbols-outlined text-sm">arrow_forward</span>
         </span>
         <h3 class="text-lg font-bold text-primary dark:text-white leading-snug group-hover:underline decoration-primary/30 underline-offset-4">

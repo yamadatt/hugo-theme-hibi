@@ -24,7 +24,7 @@
 
     {{- with $image -}}
     <div class="w-full sm:w-32 h-40 sm:h-20 shrink-0 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800">
-        <img alt="{{ $pageTitle }}" class="{{ $imageClass }}" src="{{ .RelPermalink }}"/>
+        <img alt="{{ $pageTitle }}" class="{{ $imageClass }}" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" loading="lazy" decoding="async"/>
     </div>
     {{- end -}}
 

@@ -1,0 +1,7 @@
+prevPost:
+  other: "Previous Post"
+nextPost:
+  other: "Next Post"
+readingTime:
+  one: "{{ .Count }} minute read"
+  other: "{{ .Count }} minutes read"
